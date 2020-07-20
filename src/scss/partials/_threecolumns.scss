@@ -1,0 +1,28 @@
+.cards__wrapper{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("./../../assets/columns_bg.png");
+  background-repeat: no-repeat;
+  height: 400px;
+  .card__container{
+    text-align: center;
+
+    .card__container-header{
+      font-size: 90px;
+      font-weight: 300;
+
+    }
+    .card__container-title{
+      font-size: 18px;
+      text-transform: uppercase;
+      margin: 20px 0;
+
+    }
+    .card__container-text{
+      font-size: 16px;
+
+    }
+
+  }
+}
