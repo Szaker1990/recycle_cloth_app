@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom";
 import {Link as scrollLink ,animateScroll as scroll} from "react-scroll";
-import {decoration} from "../assets/decoration.svg"
+import decoration from "../assets/decoration.svg";
 
 export const Header = () => {
 
