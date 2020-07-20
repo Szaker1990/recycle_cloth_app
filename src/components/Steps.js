@@ -4,6 +4,7 @@ import bag from "../assets/bag.png";
 import refresh from "../assets/refresh.png";
 import scale from "../assets/scale.png";
 import shirt from "../assets/shirt.png"
+import {Link} from "react-router-dom";
 
 export const Steps = () => {
 
@@ -42,6 +43,13 @@ export const Steps = () => {
                             <h3 className="box__card-header">Zamów kuriera</h3>
                             <p className="box__card-text">kurier przyjedzie <br/> w dogodnym terminie</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className={"row"}>
+                <div className="col-12">
+                    <div className={"button__wrapper"}>
+                        <Link to={'/logowanie'} className="button__wrapper-but" href="#"> Oddaj <br/>rzeczy</Link>
                     </div>
                 </div>
             </div>

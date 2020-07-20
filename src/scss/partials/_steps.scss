@@ -55,3 +55,23 @@
 
   }
 }
+
+.button__wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button__wrapper-but{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: $color-darkgrey;
+    text-align: center;
+    padding: 13px 51px;
+    border: 0.75px solid $color-darkgrey;
+    margin-right: 30px;
+    font-weight: 300;
+    margin: 20px 0 40px 0;
+
+  }
+}
