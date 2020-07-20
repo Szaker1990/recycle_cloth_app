@@ -1,11 +1,21 @@
 import React from 'react';
 import './App.scss';
+import photo from "./assets/photo.png";
+import {HashRouter,Route} from "react-router-dom";
+import {Home} from "./components/Home"
+import {Login} from "./components/Login";
+import {Register} from "./components/Register";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className={"test"}>Witaj</h1>
-    </div>
+      <HashRouter>
+          <>
+              <Route exact path='/' component={Home}/>
+              <Route path='/logowanie' component={Login}/>
+              <Route path='/rejestracja' component={Register}/>
+          </>
+
+      </HashRouter>
   );
 }
 

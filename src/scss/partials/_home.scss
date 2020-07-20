@@ -1,0 +1,43 @@
+body{
+  font-family: $font-base;
+  //background-image: url("./../../assets/photo.png");
+}
+.container{
+  //margin: 0 auto;
+
+}
+
+.login__container{
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 152px 0 0;
+  .login__container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: none;
+    color: $color-grey;
+    margin-right: 19px;
+    border:0.75px solid transparent;
+    padding: 4px 7px;
+    &:hover{
+      border: 0.75px solid $color-yellow;
+    }
+  }
+  .login__container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    text-decoration: none;
+    color: $color-grey;
+    height: 36px;
+    padding: 4px 7px;
+    border:0.75px solid transparent;
+    &:hover{
+      border: 1px solid $color-yellow;
+    }
+
+  }
+}
