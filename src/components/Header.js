@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink ,animateScroll as scroll} from "react-scroll";
 import decoration from "../assets/decoration.svg";
@@ -31,7 +31,7 @@ export const Header = () => {
                         <img className={"content__box-img"} src={decoration} alt={"decoration"}/>
                         <div className={"content__box-buttons"}>
                             <Link to={'/rejestracja'} className="content__box-link" href="#"> Oddaj <br/>rzeczy</Link>
-                            <Link to={'/rejestracja'} className="content__box-link" href="#">zorganizuj<br/> zbiorke</Link>
+                            <Link to={'/rejestracja'} className="content__box-link" href="#">zorganizuj<br/> zbiórke</Link>
                         </div>
                     </div>
 
