@@ -3,6 +3,7 @@ import {Header} from "./Header";
 import {ThreeColumns} from "./ThreeColumns";
 import {Steps} from "./Steps";
 import {About} from "./About";
+import {Help} from "./Help";
 
 export const Home = () => {
 
@@ -12,6 +13,7 @@ export const Home = () => {
             <ThreeColumns/>
             <Steps/>
             <About/>
+            <Help/>
         </>
     )
 }
