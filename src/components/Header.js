@@ -1,6 +1,6 @@
 import React from "react"
 import {Link} from "react-router-dom";
-import {Link as scrollLink ,animateScroll as scroll} from "react-scroll";
+import {Link as ScrollLink ,animateScroll as scroll} from "react-scroll";
 import decoration from "../assets/decoration.svg";
 
 export const Header = () => {
@@ -8,7 +8,7 @@ export const Header = () => {
 
     return (
         <>
-            <div className={"nav__section row"}>
+            <div id="header" className={"nav__section row"}>
                 <div className={"col-6 login__image"}>
 
                 </div>
@@ -18,13 +18,13 @@ export const Header = () => {
                         <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
                     </div>
                     <div className={"main__nav"}>
-                        <ul className={"main__nav-list"}>
-                            <li className={"main__nav-item"}>Start</li>
-                            <li className={"main__nav-item"}>O co chodzi?</li>
-                            <li className={"main__nav-item"}>O nas</li>
-                            <li className={"main__nav-item"}>Fundacja i Organizacje</li>
-                            <li className={"main__nav-item"}>Kontakt</li>
-                        </ul>
+                        <div className={"main__nav-list"}>
+                            <ScrollLink className={"main__nav-item"} to={"header"} smooth={true} duration={1000}>Start</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"threecolumns"} smooth={true} duration={1000}>O co chodzi?</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"about"} smooth={true} duration={1000}>O nas</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"steps"} smooth={true} duration={1000}>Fundacja i Organizacje</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"steps"} smooth={true} duration={1000}>Kontakt</ScrollLink>
+                        </div>
                     </div>
                     <div className={"content__box"}>
                         <h2 className={"content__box-header"}>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>

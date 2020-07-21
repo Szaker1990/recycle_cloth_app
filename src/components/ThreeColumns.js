@@ -6,7 +6,7 @@ export const ThreeColumns = () => {
 
     return (
         <>
-            <div className={"row"}>
+            <div className={"row"} id="threecolumns">
                 <div className={"col-12 cards__wrapper"}>
                     <div className={"card__container col-3"}>
                         <h2 className={"card__container-header"}>10</h2>

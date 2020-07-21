@@ -10,7 +10,7 @@ export const Steps = () => {
 
     return (
         <>
-            <div className={"row"}>
+            <div className={"row"} id="steps">
                 <div className="col-12 header__box">
                     <h2 className="header__box-head">Wystarczą 4 proste kroki</h2>
                 </div>

@@ -6,7 +6,7 @@ export const About = () => {
 
     return (
         <>
-            <div className={"row section__about"}>
+            <div id="about" className={"row section__about"}>
                 <div className={"col-6 about__container"}>
                     <h2 className={"about__header"}>O nas</h2>
                     <img className={"about__decoration"} src={decoration} alt={"decoration"}/>
