@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import photo from "./assets/photo.png";
+// import photo from "./assets/photo.png";
 import {HashRouter,Route} from "react-router-dom";
 import {Home} from "./components/Home"
 import {Login} from "./components/Login";

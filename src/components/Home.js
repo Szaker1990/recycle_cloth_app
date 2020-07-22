@@ -4,6 +4,7 @@ import {ThreeColumns} from "./ThreeColumns";
 import {Steps} from "./Steps";
 import {About} from "./About";
 import {Help} from "./Help";
+import {Contact} from "./Contact";
 
 export const Home = () => {
 
@@ -14,6 +15,7 @@ export const Home = () => {
             <Steps/>
             <About/>
             <Help/>
+            <Contact/>
         </>
     )
 }

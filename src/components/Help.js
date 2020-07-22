@@ -10,9 +10,9 @@ export const Help = () => {
                     <h2 className="help__container-header">Komu pomagamy?</h2>
                     <img className={"help__container-img"} src={decoration} alt={"decoration"}/>
                     <div className="help__container-buttons">
-                        <button className="help__button">Fundacją</button>
-                        <button className="help__button">Organizacją pozarządowym</button>
-                        <button className="help__button">Lokalny zbiórką</button>
+                        <button className="help__button">Fundacjom</button>
+                        <button className="help__button">Organizacjom pozarządowym</button>
+                        <button className="help__button">Lokalny zbiórkom</button>
                     </div>
                     <p className="help__container-text">W naszej bazie znajdziesz listę
                         zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się

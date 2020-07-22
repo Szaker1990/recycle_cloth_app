@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Link as ScrollLink ,animateScroll as scroll} from "react-scroll";
+import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/decoration.svg";
 
 export const Header = () => {
