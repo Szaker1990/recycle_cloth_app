@@ -26,11 +26,14 @@
 
 .form__wrapper{
   display: flex;
+  background-color: #FFFFFFC9;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  width: 470px;
 
   .form__wrapper-box{
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
 
     .form__wrapper-label{
       font-size: 16px;
@@ -43,5 +46,42 @@
       border-bottom: 0.75px solid $color-grey;
 
     }
+  }
+}
+
+.form__wrapper-area{
+  display: flex;
+  flex-direction: column;
+
+  .area__label{
+
+  }
+  .area__input{
+    border: none;
+    border-bottom: 0.75px solid $color-grey;
+    resize: none;
+    color: $color-grey;
+    font-family: $font-base;
+
+  }
+}
+.form__button-wrapper{
+  display: flex;
+  justify-content: flex-end;
+
+  .button__submit{
+
+  }
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+
+  .footer__header{
+
+  }
+  .footer__logos{
+
   }
 }
