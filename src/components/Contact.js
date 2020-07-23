@@ -13,6 +13,7 @@ export const Contact = () => {
                 <div className="col-5 contact__container-form">
                     <h2 className="form__header">Skontaktuj sie z nami</h2>
                     <img className={"form__img"} src={decoration} alt={"decoration"}/>
+                    <p></p>
                     <form>
                         <div className="form__wrapper">
                             <div className={"form__wrapper-box kick"}>
@@ -27,8 +28,8 @@ export const Contact = () => {
                             </div>
                         </div>
                         <div className={"form__wrapper-area"}>
-                            <label className={"area__label"}>Wpisz Swoja Wiadomośc</label>
-                            <textarea className={"area__input"} rows={5} cols={5} placeholder={"Lorem ipsum dolor sit amet," +
+                            <label className={"area__label"}>Wpisz swoja wiadomość</label>
+                            <textarea className={"area__input"} rows={4} cols={4} placeholder={"Lorem ipsum dolor sit amet," +
                             " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" +
                             ". Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " +
                             "consequat."}>
@@ -44,16 +45,15 @@ export const Contact = () => {
                 </div>
             </div>
                 <div className="row">
-                    <div className="col-12">
-                        <div className="col-12 footer">
-                            <h4 className={"footer__header"}>CopyRight</h4>
+                        <div className={"col-4"}></div>
+                        <div className="col-8 footer">
+                            <h4 className={"footer__header"}>Copyright by CodersLab</h4>
                             <div className={"footer__logos"}>
                             <img src={insta} alt="instagram"/>
                             <img src={face} alt="facebook"/>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </>
     )
