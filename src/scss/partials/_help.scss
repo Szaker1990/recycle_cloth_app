@@ -31,9 +31,18 @@
       border: 0.75px solid transparent;
       margin-right: 30px;
       padding: 10px 30px;
-      &:hover{
-        border:0.75px solid $color-darkgrey ;
-      }
+      //&:hover{
+      //  border:0.75px solid $color-darkgrey ;
+      //}
+    }
+    .inactive{
+      border:0.75px solid transparent;
+
+    }
+
+    .active{
+      border:0.75px solid $color-darkgrey
+
     }
   }
   .help__container-text{
@@ -86,3 +95,4 @@
     
   }
 }
+

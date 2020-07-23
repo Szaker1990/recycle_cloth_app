@@ -13,7 +13,7 @@ export const PaginationButtons = ({postsPerPage, totalPosts, paginate}) => {
                     <li key={number} className="pagination__item">
                         <button onClick={() => paginate(number)} className="pagination__link">{number}</button>
                     </li>
-                ))};
+                ))}
             </ul>
         </>
     )
