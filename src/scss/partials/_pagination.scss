@@ -1,0 +1,17 @@
+.pagination__wrapper{
+  display: flex;
+  margin: 5%;
+
+  .pagination__item{
+    margin: 0 10%;
+
+    .pagination__link{
+      font-size: 18px;
+      color: $font-base;
+      border: none;
+      background: white;
+
+    }
+
+  }
+}

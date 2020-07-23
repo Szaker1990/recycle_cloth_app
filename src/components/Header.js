@@ -23,7 +23,7 @@ export const Header = () => {
                             <ScrollLink className={"main__nav-item"} to={"steps"} smooth={true} duration={1000}>O co chodzi?</ScrollLink>
                             <ScrollLink className={"main__nav-item"} to={"about"} smooth={true} duration={1000}>O nas</ScrollLink>
                             <ScrollLink className={"main__nav-item"} to={"help"} smooth={true} duration={1000}>Fundacja i Organizacje</ScrollLink>
-                            <ScrollLink className={"main__nav-item"} to={"steps"} smooth={true} duration={1000}>Kontakt</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"contact"} smooth={true} duration={1000}>Kontakt</ScrollLink>
                         </div>
                     </div>
                     <div className={"content__box"}>

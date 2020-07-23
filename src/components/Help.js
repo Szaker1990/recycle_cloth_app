@@ -17,16 +17,19 @@ export const Help = () => {
     const handleToFoundation = () =>{
         setHelper(foundations);
         whoIsActive()
+        setCurrPage(1)
     }
 
     const handleToOrganizations = () =>{
         setHelper(organization);
         whoIsActive2()
+        setCurrPage(1)
     }
 
     const handleToLocals = () =>{
         setHelper(local);
         whoIsActive3()
+        setCurrPage(1)
     }
 
     const indexOfLastHelper = currPage * helpersPerPage;
@@ -84,11 +87,9 @@ export const Help = () => {
                 </div>
             </div>
             <div className="row help__setup">
-                <div className="col-10">
                     <Paginate items={currentHelpers}/>
                     <PaginationButtons postsPerPage={helpersPerPage} totalPosts={helper.length} paginate={paginate}/>
                 </div>
-            </div>
         </>
     )
 }

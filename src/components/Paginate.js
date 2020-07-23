@@ -4,7 +4,7 @@ export const Paginate = ({items}) => {
 
     return (
         <>
-            <div className="col-10">
+            <div className="col-10 paginate__wrapper">
                 {items.map((item,index) =>(
                     <div key={index} className="help__box">
                         <div className={"help__wrapper"}>

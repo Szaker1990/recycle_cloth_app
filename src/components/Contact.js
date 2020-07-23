@@ -10,7 +10,7 @@ export const Contact = () => {
 
     return (
         <>
-            <div className={"contact__container"}>
+            <div id="contact" className={"contact__container"}>
                 <div className="row">
                     <div className="col-7"></div>
                     <div className="col-5 contact__container-form">
