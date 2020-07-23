@@ -1,7 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import decoration from "../assets/decoration.svg";
+import foundations from "../data/foundations";
+import organization from "../data/organization";
+import local from "../data/local";
+import {Paginate} from "./Paginate";
+import {PaginationButtons} from "./PaginationButtons";
 
 export const Help = () => {
+    const[helper,setHelper] = useState(foundations);
+    const[iter,setIter] = useState(0);
+    const [currPage,setCurrPage] = useState(1);
+    const [helpersPerPage,setHelpersPerPage] = useState(3);
+
+    const handleToFoundation = () =>{
+        setHelper(foundations);
+    }
+
+    const handleToOrganizations = () =>{
+        setHelper(organization);
+    }
+
+    const handleToLocals = () =>{
+        setHelper(local);
+    }
+    const indexOfLastHelper = currPage * helpersPerPage;
+    const indexOfFirstHelper = indexOfLastHelper - helpersPerPage;
+    const currentHelpers = helper.slice(indexOfFirstHelper,indexOfLastHelper);
+
+    const paginate = (pageNumber) =>{
+        setCurrPage(pageNumber)
+    }
+
 
     return (
         <>
@@ -10,9 +39,9 @@ export const Help = () => {
                     <h2 className="help__container-header">Komu pomagamy?</h2>
                     <img className={"help__container-img"} src={decoration} alt={"decoration"}/>
                     <div className="help__container-buttons">
-                        <button className="help__button">Fundacjom</button>
-                        <button className="help__button">Organizacjom pozarządowym</button>
-                        <button className="help__button">Lokalny zbiórkom</button>
+                        <button className="help__button" onClick={handleToFoundation}>Fundacjom</button>
+                        <button className="help__button " onClick={handleToOrganizations}>Organizacjom pozarządowym</button>
+                        <button className="help__button" onClick={handleToLocals}>Lokalny zbiórkom</button>
                     </div>
                     <p className="help__container-text">W naszej bazie znajdziesz listę
                         zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się
@@ -22,39 +51,8 @@ export const Help = () => {
             </div>
             <div className="row help__setup">
                 <div className="col-10">
-                    <div className="help__box">
-                        <div className={"help__wrapper"}>
-                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
-                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
-                                trudnej sytuacji życiowej.
-                            </p>
-                        </div>
-                        <div>
-                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                        </div>
-                    </div>
-                    <div className="help__box">
-                        <div className={"help__wrapper"}>
-                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
-                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
-                                trudnej sytuacji życiowej.
-                            </p>
-                        </div>
-                        <div>
-                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                        </div>
-                    </div>
-                    <div className="help__box">
-                        <div className={"help__wrapper"}>
-                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
-                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
-                                trudnej sytuacji życiowej.
-                            </p>
-                        </div>
-                        <div>
-                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
-                        </div>
-                    </div>
+                    <Paginate items={currentHelpers}/>
+                    <PaginationButtons postsPerPage={helpersPerPage} totalPosts={helper.length} paginate={paginate} />
                 </div>
             </div>
         </>

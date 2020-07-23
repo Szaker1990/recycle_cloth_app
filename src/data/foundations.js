@@ -52,5 +52,6 @@ export default [
         "name": 'Fundacja “Lorem-6”',
         "goal": 'Cel i misja: Lorem ipsum dolor sit amet, qui posse idque mnesarchum..',
         "items": 'akcesoria, karma, sianko'
-    }
+    },
+
 ];
