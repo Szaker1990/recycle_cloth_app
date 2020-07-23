@@ -6,7 +6,6 @@
   background-color: #FFFFFFC9;
   background-blend-mode: screen;
 }
-
 .contact__container-form{
   display: flex;
   flex-direction: column;
@@ -17,14 +16,12 @@
   .form__header{
     font-size: 38px;
     text-align: center;
-    
   }
   .form__img{
     margin: 5% 0;
 
   }
 }
-
 .form__wrapper{
   display: flex;
   background-color: #FFFFFFC9;
@@ -39,24 +36,21 @@
 
     .form__wrapper-label{
       font-size: 16px;
-
     }
     .form__wrapper-input{
       font-size: 18px;
       color: $color-grey;
       border: none;
       border-bottom: 0.75px solid $color-grey;
-
     }
   }
 }
-
 .form__wrapper-area{
   display: flex;
   flex-direction: column;
 
   .area__label{
-    font-size: 16px;
+    font-size: 18px;
 
   }
   .area__input{
@@ -81,6 +75,7 @@
     margin-top: 25px;
     height: 50px;
     width: 150px;
+    cursor: pointer;
 
   }
 }
@@ -88,13 +83,20 @@
 .footer{
   margin-top: 2%;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
 
   .footer__header{
+    display: flex;
+    justify-content: center;
 
   }
   .footer__logos{
+    display: flex;
+    justify-content: flex-end;
+    
+    .footer__img-insta{
+      margin-right: 25%;
+      margin-left: 2%;
+    }
 
   }
 }

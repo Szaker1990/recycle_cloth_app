@@ -20,6 +20,43 @@ export const Help = () => {
                     </p>
                 </div>
             </div>
+            <div className="row help__setup">
+                <div className="col-10">
+                    <div className="help__box">
+                        <div className={"help__wrapper"}>
+                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
+                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
+                                trudnej sytuacji życiowej.
+                            </p>
+                        </div>
+                        <div>
+                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                        </div>
+                    </div>
+                    <div className="help__box">
+                        <div className={"help__wrapper"}>
+                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
+                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
+                                trudnej sytuacji życiowej.
+                            </p>
+                        </div>
+                        <div>
+                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                        </div>
+                    </div>
+                    <div className="help__box">
+                        <div className={"help__wrapper"}>
+                            <h2 className={"help__wrapper-name"}>Fundacja “Dbam o Zdrowie”</h2>
+                            <p className={"help__wrapper-goal"}>Cel i misja: Pomoc osobom znajdującym się w
+                                trudnej sytuacji życiowej.
+                            </p>
+                        </div>
+                        <div>
+                            <p className={"help__wrapper-items"}>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
