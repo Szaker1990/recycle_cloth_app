@@ -9,9 +9,9 @@ export const Help = () => {
     const [helper, setHelper] = useState(foundations);
     const [currPage, setCurrPage] = useState(1);
     const [helpersPerPage] = useState(3);
-    const [whoFun, setWhoFun] = useState('help__button');
-    const [whoOrg, setWhoOrg] = useState('help__button');
-    const [whoLoc, setWhoLoc] = useState('help__button');
+    const [activeFoundation, setActiveFoundation] = useState('help__button');
+    const [activeOrg, setActiveOrg] = useState('help__button');
+    const [activeLocal, setActiveLocal] = useState('help__button');
     const handleToFoundation = () => {
         setHelper(foundations);
         whoIsActive()
@@ -19,12 +19,12 @@ export const Help = () => {
     }
     const handleToOrganizations = () => {
         setHelper(organization);
-        whoIsActive2()
+        whoIsActive()
         setCurrPage(1)
     }
     const handleToLocals = () => {
         setHelper(local);
-        whoIsActive3()
+        whoIsActive()
         setCurrPage(1)
     }
     const paginate = (pageNumber) => {
@@ -32,29 +32,21 @@ export const Help = () => {
     }
     const whoIsActive = () => {
         if (helper === foundations) {
-            setWhoFun("help__button active")
-        } else {
-            setWhoFun("help__button")
-        }
-    }
-    const whoIsActive2 = () => {
-        if (helper === organization) {
-            setWhoOrg("help__button active")
-        } else {
-            setWhoOrg("help__button")
-        }
-    }
-    const whoIsActive3 = () => {
-        if (helper === local) {
-            setWhoLoc("help__button active")
-        } else {
-            setWhoLoc("help__button")
+            setActiveFoundation("help__button active")
+            setActiveLocal("help__button")
+            setActiveOrg("help__button")
+        } else if(helper === organization){
+            setActiveOrg("help__button active")
+            setActiveFoundation("help__button")
+            setActiveLocal("help__button")
+        }else if(helper === local){
+            setActiveOrg("help__button ")
+            setActiveFoundation("help__button")
+            setActiveLocal("help__button active")
         }
     }
     useEffect(() => {
         whoIsActive()
-        whoIsActive2()
-        whoIsActive3()
     }, [handleToFoundation, handleToOrganizations, handleToLocals]);
     const indexOfLastHelper = currPage * helpersPerPage;
     const indexOfFirstHelper = indexOfLastHelper - helpersPerPage;
@@ -66,9 +58,9 @@ export const Help = () => {
                     <h2 className="help__container-header">Komu pomagamy?</h2>
                     <img className="help__container-img" src={decoration} alt={"decoration"}/>
                     <div className="help__container-buttons">
-                        <button className={whoFun} onClick={handleToFoundation}>Fundacjom</button>
-                        <button className={whoOrg} onClick={handleToOrganizations}>Organizacjom pozarządowym</button>
-                        <button className={whoLoc} onClick={handleToLocals}>Lokalny zbiórkom</button>
+                        <button className={activeFoundation} onClick={handleToFoundation}>Fundacjom</button>
+                        <button className={activeOrg} onClick={handleToOrganizations}>Organizacjom pozarządowym</button>
+                        <button className={activeLocal} onClick={handleToLocals}>Lokalny zbiórkom</button>
                     </div>
                     <p className="help__container-text">W naszej bazie znajdziesz listę
                         zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się
