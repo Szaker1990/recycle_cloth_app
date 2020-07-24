@@ -15,26 +15,13 @@ export const Contact = () => {
         message: userMessage
     })
     const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact'
-    const handleUserName = (e) => {
-        setUserName(e.target.value)
-        setUser(prevState => ({
-            ...prevState,
-            name: userName
-        }));
-    }
-    const handleUserEmail = (e) => {
-        setUserEmail(e.target.value)
-    }
-    const handleUserMessage = (e) => {
-        setUserMessage(e.target.value)
-    }
     const handleSubmitData = () => {
         let newUser = {
             name: userName.trim(),
             email: userEmail,
             message: userMessage
         }
-        setUser(newUser)
+        // setUser(newUser)
         if(userName.length<3 ){
             setNameError("Podane imię jest nieprawidłowe!")
         }else{
@@ -52,9 +39,23 @@ export const Contact = () => {
         }
         setUser(newUser)
     }
+    const handleUserName = (e) => {
+        setUserName(e.target.value)
+        // setUser(prevState => ({
+        //     ...prevState,
+        //     name: userName
+        // }));
+    }
+    const handleUserEmail = (e) => {
+        setUserEmail(e.target.value)
+    }
+    const handleUserMessage = (e) => {
+        setUserMessage(e.target.value)
+    }
     const sendForm = (e) => {
         e.preventDefault()
         handleSubmitData()
+        console.log(user);
         if(userEmail.length > 1){
             fetch(ApiAdress,{
                 method: "POST",
