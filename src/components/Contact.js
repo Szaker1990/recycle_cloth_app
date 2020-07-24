@@ -9,18 +9,27 @@ export const Contact = () => {
     const [nameError, setNameError] = useState("");
     const [emailError, setEmailError] = useState("");
     const [messageError, setMessageError] = useState("")
+    const [responseMessage,SetResponseMessage] = useState("")
     const [user, setUser] = useState({
         name: userName,
         email: userEmail,
         message: userMessage
     })
     const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact'
-    const handleSubmitData = () => {
+
+    const addNewUser = () =>{
         let newUser = {
             name: userName.trim(),
             email: userEmail,
             message: userMessage
         }
+        setUser(newUser)
+    }
+
+    useEffect(() =>{
+        addNewUser()
+    },[userName,userEmail,userMessage])
+    const handleSubmitData = () => {
         // setUser(newUser)
         if(userName.length<3 ){
             setNameError("Podane imię jest nieprawidłowe!")
@@ -37,14 +46,10 @@ export const Contact = () => {
         }else{
             setMessageError("");
         }
-        setUser(newUser)
     }
     const handleUserName = (e) => {
         setUserName(e.target.value)
-        // setUser(prevState => ({
-        //     ...prevState,
-        //     name: userName
-        // }));
+
     }
     const handleUserEmail = (e) => {
         setUserEmail(e.target.value)
@@ -55,8 +60,7 @@ export const Contact = () => {
     const sendForm = (e) => {
         e.preventDefault()
         handleSubmitData()
-        console.log(user);
-        if(userEmail.length > 1){
+        if(userEmail.length > 1 && userName.length >1){
             fetch(ApiAdress,{
                 method: "POST",
                 body: JSON.stringify(user),
@@ -64,7 +68,15 @@ export const Contact = () => {
                     "Content-Type": "application/json"
                 }
             })
-                .then( resp => resp.json())
+                .then((response) => {
+                    if(response.status === 200){
+                        console.log("SUCCESSS")
+                        SetResponseMessage("Wiadomośc została wysłana! Wkrótce sie z Toba skontaktujemy")
+                        return response.json();
+                    }else if(response.status === 408){
+                        console.log("SOMETHING WENT WRONG")
+                    }
+                })
                 .then( data => console.log(data))
                 .catch( err => console.log(err));
 
@@ -72,9 +84,7 @@ export const Contact = () => {
             return false
         }
     }
-    // useEffect(()=>{
-    //     handleUserName()
-    // },[userName])
+
     return (
         <>
             <div id="contact" className={"contact__container"}>
@@ -83,9 +93,7 @@ export const Contact = () => {
                     <div className="col-5 contact__container-form">
                         <h2 className="form__header">Skontaktuj sie z nami</h2>
                         <img className={"form__img"} src={decoration} alt={"decoration"}/>
-                        <p className={"succes__message"}>Wiadomość została wysłana!<br/>
-                        Wkrótce sie skontaktujemy.
-                        </p>
+                        <p className={"succes__message"}>{responseMessage}</p>
                         <form onSubmit={sendForm}>
                             <div className="form__wrapper">
                                 <div className={"form__wrapper-box kick"}>
