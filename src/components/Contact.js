@@ -77,8 +77,15 @@ export const Contact = () => {
                 .catch( err => console.log(err));
         }else{
             return false
+            }
+            reset()
         }
-    }
+
+        const reset = () =>{
+            setUserName("");
+            setUserEmail("");
+            setUserMessage("")
+        }
     return (
         <>
             <div id="contact" className={"contact__container"}>
@@ -92,20 +99,20 @@ export const Contact = () => {
                             <div className="form__wrapper">
                                 <div className={"form__wrapper-box kick"}>
                                     <label className="form__wrapper-label">Wpisz swoje imię</label>
-                                    <input className="form__wrapper-input" onChange={handleUserName}
+                                    <input value={userName} className="form__wrapper-input" onChange={handleUserName}
                                            placeholder={"Grzesiek"} type="text"/>
                                     <p className="error__message">{nameError}</p>
                                 </div>
                                 <div className={"form__wrapper-box"}>
                                     <label className="form__wrapper-label">Wpisz swój email</label>
-                                    <input className="form__wrapper-input" onChange={handleUserEmail}
+                                    <input value={userEmail} className="form__wrapper-input" onChange={handleUserEmail}
                                            placeholder={"abc@xyz.pl"} type="email"/>
                                     <p className="error__message">{emailError}</p>
                                 </div>
                             </div>
                             <div className={"form__wrapper-area"}>
-                                <label className={"area__label"}>Wpisz swoja wiadomość</label>
-                                <textarea className={"area__input"} onChange={handleUserMessage} rows={4} cols={4}
+                                <label  className={"area__label"}>Wpisz swoja wiadomość</label>
+                                <textarea value={userMessage} className={"area__input"} onChange={handleUserMessage} rows={4} cols={4}
                                           placeholder={"Lorem ipsum dolor sit amet," +
                                           " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" +
                                           ". Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " +
