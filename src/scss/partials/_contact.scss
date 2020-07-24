@@ -12,6 +12,7 @@
   align-items: center;
   margin-top: 8%;
   margin-bottom: 7%;
+  background: transparent;
   
   .form__header{
     font-size: 38px;
@@ -19,7 +20,6 @@
   }
   .form__img{
     margin: 10% 0;
-
   }
   .succes__message{
     color: green;
@@ -36,12 +36,10 @@
   justify-content: space-between;
   width: 470px;
   background: transparent;
-
   .form__wrapper-box{
     display: flex;
     flex-direction: column;
     height: 60px;
-
     .form__wrapper-label{
       font-size: 16px;
     }
@@ -50,16 +48,15 @@
       color: $color-grey;
       border: none;
       border-bottom: 0.75px solid $color-grey;
+      background: transparent;
     }
   }
 }
 .form__wrapper-area{
   display: flex;
   flex-direction: column;
-
   .area__label{
     font-size: 18px;
-
   }
   .area__input{
     border: none;
@@ -67,15 +64,14 @@
     resize: none;
     color: $color-grey;
     font-family: $font-base;
-
+    background: transparent;
   }
 }
 .form__button-wrapper{
   display: flex;
   justify-content: flex-end;
-
   .button__submit{
-    background-color: #ffffff;
+    background-color: transparent;
     font-size: 18px;
     padding: 10px 20px;
     border: 0.75px solid $color-darkgrey;
@@ -84,19 +80,16 @@
     height: 50px;
     width: 150px;
     cursor: pointer;
-
   }
 }
 
 .footer{
   margin-top: 2%;
   display: flex;
-
   .footer__header{
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   .footer__logos{
     display: flex;
@@ -106,10 +99,8 @@
       margin-right: 25%;
       margin-left: 2%;
     }
-
   }
 }
-
 .error__message{
   color: red;
   font-size: 12px;

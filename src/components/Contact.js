@@ -16,7 +16,6 @@ export const Contact = () => {
         message: userMessage
     })
     const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact'
-
     const addNewUser = () =>{
         let newUser = {
             name: userName.trim(),
@@ -25,12 +24,10 @@ export const Contact = () => {
         }
         setUser(newUser)
     }
-
     useEffect(() =>{
         addNewUser()
     },[userName,userEmail,userMessage])
     const handleSubmitData = () => {
-        // setUser(newUser)
         if(userName.length<3 ){
             setNameError("Podane imię jest nieprawidłowe!")
         }else{
@@ -49,7 +46,6 @@ export const Contact = () => {
     }
     const handleUserName = (e) => {
         setUserName(e.target.value)
-
     }
     const handleUserEmail = (e) => {
         setUserEmail(e.target.value)
@@ -73,18 +69,16 @@ export const Contact = () => {
                         console.log("SUCCESSS")
                         SetResponseMessage("Wiadomośc została wysłana! Wkrótce sie z Toba skontaktujemy")
                         return response.json();
-                    }else if(response.status === 408){
+                    }else if(response.status === 400){
                         console.log("SOMETHING WENT WRONG")
                     }
                 })
                 .then( data => console.log(data))
                 .catch( err => console.log(err));
-
         }else{
             return false
         }
     }
-
     return (
         <>
             <div id="contact" className={"contact__container"}>
