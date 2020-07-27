@@ -70,7 +70,7 @@ export const Help = () => {
             </div>
             <div className="row help__setup">
                 <Paginate items={currentHelpers}/>
-                <PaginationButtons postsPerPage={helpersPerPage} totalPosts={helper.length} paginate={paginate}/>
+                <PaginationButtons currPage={currPage} postsPerPage={helpersPerPage} totalPosts={helper.length} paginate={paginate}/>
             </div>
         </>
     )

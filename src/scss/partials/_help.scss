@@ -36,7 +36,10 @@
       border:0.75px solid transparent;
     }
     .active{
-      border:0.75px solid $color-darkgrey
+      border:0.75px solid $color-darkgrey;
+      background: white;
+      cursor: pointer;
+      
     }
   }
   .help__container-text{
