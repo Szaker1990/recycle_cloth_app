@@ -50,6 +50,13 @@
       border-bottom: 0.75px solid $color-grey;
       background: transparent;
     }
+    .form__wrapper-active{
+      font-size: 18px;
+      color: $color-grey;
+      border: none;
+      border-bottom: 0.75px solid red;
+      background: transparent;
+    }
   }
 }
 .form__wrapper-area{
@@ -65,6 +72,15 @@
     color: $color-grey;
     font-family: $font-base;
     background: transparent;
+  }
+  .area__input-active{
+    border: none;
+    border-bottom: 0.75px solid red;
+    resize: none;
+    color: $color-grey;
+    font-family: $font-base;
+    background: transparent;
+
   }
 }
 .form__button-wrapper{

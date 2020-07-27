@@ -10,7 +10,8 @@ export const PaginationButtons = ({postsPerPage, totalPosts, paginate,currPage})
             <ul className="pagination__wrapper">
                 {pageNumbers.map(number => (
                     <li key={number} className="pagination__item">
-                        <button onClick={() => paginate(number)} className={(currPage === number? 'active':"pagination__link")}>{number}</button>
+                        <button onClick={() => paginate(number)} className={(currPage === number? 'active'
+                            :"pagination__link")}>{number}</button>
                     </li>
                 ))}
             </ul>
