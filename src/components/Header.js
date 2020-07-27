@@ -9,9 +9,7 @@ export const Header = () => {
     return (
         <>
             <div id="header" className={"nav__section row"}>
-                <div className={"col-6 login__image"}>
-
-                </div>
+                <div className={"col-6 login__image"}></div>
                 <div className={"col-6"}>
                     <div className={"login__container"}>
                         <Link to={'/logowanie'} className="login__container-login" href="#">Zaloguj</Link>
