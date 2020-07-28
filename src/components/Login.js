@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
-import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/decoration.svg";
+import {HashLink} from 'react-router-hash-link';
 
 export const Login = () => {
     const [user,setUser] = useState({
@@ -44,11 +44,11 @@ export const Login = () => {
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>
-                            <ScrollLink className={"main__nav-item"} to={"/#threecolumns"} smooth={true} duration={1000}>Start</ScrollLink>
-                            <ScrollLink className={"main__nav-item"} to={"/#steps"} smooth={true} duration={1000}>O co chodzi?</ScrollLink>
-                            <ScrollLink className={"main__nav-item"} to={"about"} smooth={true} duration={1000}>O nas</ScrollLink>
-                            <ScrollLink className={"main__nav-item"} to={"help"} smooth={true} duration={1000}>Fundacja i Organizacje</ScrollLink>
-                            <ScrollLink className={"main__nav-item"} to={"contact"} smooth={true} duration={1000}>Kontakt</ScrollLink>
+                            <HashLink className={"main__nav-item"} to={"/#threecolumns"}>Start</HashLink>
+                            <HashLink className={"main__nav-item"} to={"/#steps"}>O co chodzi?</HashLink>
+                            <HashLink className={"main__nav-item"} to={"/#about"}>O nas</HashLink>
+                            <HashLink className={"main__nav-item"} to={"/#help"}>Fundacja i Organizacje</HashLink>
+                            <HashLink className={"main__nav-item"} to={"/#contact"}>Kontakt</HashLink>
                         </div>
                     </div>
                 </div>
@@ -61,10 +61,12 @@ export const Login = () => {
                         <div className={"login__input-wrapper"}>
                             <div className={"wrapper__handler"}>
                                 <label className={"login__form-label"}>Email</label>
-                                <input type={"text"} name={"email"} onChange={handleChangeUserData} value={user.email} className={"login__form-email"}/>
+                                <input type={"text"} name={"email"} onChange={handleChangeUserData}
+                                       value={user.email} className={"login__form-email"}/>
                                 <p className={"error__message"}>{emailError}</p>
                                 <label className={"login__form-label"}>Hasło</label>
-                                <input  type={"text"} name={"password"}  onChange={handleChangeUserData} value={user.password} className={"login__form-password"}/>
+                                <input  type={"text"} name={"password"}  onChange={handleChangeUserData}
+                                        value={user.password} className={"login__form-password"}/>
                                 <p className={"error__message"}>{passwordError}</p>
                             </div>
                         </div>

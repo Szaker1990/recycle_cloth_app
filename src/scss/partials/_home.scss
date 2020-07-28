@@ -60,6 +60,7 @@ body{
       border:0.75px solid transparent;
       padding: 4px 7px;
       cursor: pointer;
+      text-decoration: none;
      &:hover{
        border:0.75px solid $color-darkgrey;
      }
