@@ -21,12 +21,12 @@ export const Login = () => {
     }
     const handleLogin = (e) => {
         e.preventDefault()
-        if (user.email < 5 && !user.email.includes("@")) {
+        if (user.email.length < 5 || !user.email.includes("@") || !user.email.includes(".")) {
             setEmailError("Podany email jest nieprawidłowy!");
         } else {
             setEmailError("");
         }
-        if (user.password < 6) {
+        if (user.password.length < 6) {
             setPasswordError("Podane hasło jest za krótkie!");
         } else {
             setPasswordError("");

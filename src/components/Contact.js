@@ -28,12 +28,12 @@ export const Contact = () => {
         addNewUser()
     },[userName,userEmail,userMessage])
     const handleSubmitData = () => {
-        if(userName.length<3 ){
+        if(userName.length <3 ){
             setNameError("Podane imię jest nieprawidłowe!");
         }else{
             setNameError("");
         }
-        if(userEmail<5 && !user.email.includes("@")){
+        if(userEmail.length<5 || !userEmail.includes("@") || !userEmail.includes(".")){
             setEmailError("Podany email jest nieprawidłowy!");
         }else{
             setEmailError("");
@@ -106,7 +106,7 @@ export const Contact = () => {
                                 <div className={"form__wrapper-box"}>
                                     <label className={"form__wrapper-label"}>Wpisz swój email</label>
                                     <input value={userEmail} className={(emailError === "" ? "form__wrapper-input" : "form__wrapper-active")} onChange={handleUserEmail}
-                                           placeholder={"abc@xyz.pl"} type="email"/>
+                                           placeholder={"abc@xyz.pl"} type="text"/>
                                     <p className={"error__message"}>{emailError}</p>
                                 </div>
                             </div>
