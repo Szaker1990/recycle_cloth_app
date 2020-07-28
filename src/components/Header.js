@@ -14,6 +14,7 @@ export const Header = () => {
                     <div className={"login__container"}>
                         <Link to={'/logowanie'} className="login__container-login" href="#">Zaloguj</Link>
                         <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
+                        <Link to={'/wylogowanie'} className="login__container-register" href="#">Wyloguj</Link>
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>

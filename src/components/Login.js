@@ -65,7 +65,7 @@ export const Login = () => {
                                        value={user.email} className={"login__form-email"}/>
                                 <p className={"error__message"}>{emailError}</p>
                                 <label className={"login__form-label"}>Hasło</label>
-                                <input  type={"text"} name={"password"}  onChange={handleChangeUserData}
+                                <input  type={"password"} name={"password"}  onChange={handleChangeUserData}
                                         value={user.password} className={"login__form-password"}/>
                                 <p className={"error__message"}>{passwordError}</p>
                             </div>

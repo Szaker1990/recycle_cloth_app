@@ -1,0 +1,29 @@
+.logout__container{
+  margin-top: 8%;
+
+  .logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .logout__header{
+      text-align: center;
+      width: 500px;
+      font-size: 40px;
+      color: $color-darkgrey;
+      margin-bottom: 1%;
+      
+    }
+    .logout__button{
+      text-decoration: none;
+      color:$color-darkgrey;
+      font-weight: 300;
+      font-family: $font-base;
+      margin-top: 2%;
+      border: 0.75px solid $color-darkgrey;
+      padding: 12px 22px;
+
+    }
+  }
+}

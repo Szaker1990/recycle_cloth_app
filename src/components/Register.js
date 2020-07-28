@@ -33,8 +33,8 @@ export const Register = () =>{
             setPasswordError("");
 
         }
-        if(user.password !== user.password2 || user.password2.length <6){
-            setPassword2Error("musi mieć conajmniej 6 znaków i być takie samo jak");
+        if(user.password !== user.password2){
+            setPassword2Error("Podane hasło jest rózne od pierwszego");
         }else{
             setPassword2Error("");
         }
@@ -71,11 +71,11 @@ export const Register = () =>{
                                        value={user.email} className={"login__form-email"}/>
                                 <p className={"error__message"}>{emailError}</p>
                                 <label className={"login__form-label"}>Hasło</label>
-                                <input  type={"text"} name={"password"}  onChange={handleChangeUserData}
+                                <input  type={"password"} name={"password"}  onChange={handleChangeUserData}
                                         value={user.password} className={"login__form-password"}/>
                                 <p className={"error__message"}>{passwordError}</p>
                                 <label className={"login__form-label"}>Hasło</label>
-                                <input  type={"text"} name={"password2"}  onChange={handleChangeUserData}
+                                <input  type={"password"} name={"password2"}  onChange={handleChangeUserData}
                                         value={user.password2} className={"login__form-password"}/>
                                 <p className={"error__message"}>{password2Error}</p>
                             </div>
