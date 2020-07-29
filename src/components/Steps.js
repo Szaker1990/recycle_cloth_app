@@ -48,7 +48,7 @@ export const Steps = () => {
             <div className={"row"}>
                 <div className="col-12">
                     <div className={"button__wrapper"}>
-                        <Link to={'/logowanie'} className="button__wrapper-but" href="#"> Oddaj <br/>rzeczy</Link>
+                        <Link to={'/formularz'} className="button__wrapper-but" href="#"> Oddaj <br/>rzeczy</Link>
                     </div>
                 </div>
             </div>

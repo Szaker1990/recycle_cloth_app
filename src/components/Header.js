@@ -27,7 +27,7 @@ export const Header = () => {
                         <h2 className={"content__box-header"}>Zacznij pomagać!<br/> Oddaj niechciane rzeczy w zaufane ręce</h2>
                         <img className={"content__box-img"} src={decoration} alt={"decoration"}/>
                         <div className={"content__box-buttons"}>
-                            <Link to={'/rejestracja'} className="content__box-link" href="#"> Oddaj <br/>rzeczy</Link>
+                            <Link to={'/formularz'} className="content__box-link" href="#"> Oddaj <br/>rzeczy</Link>
                             <Link to={'/rejestracja'} className="content__box-link" href="#">zorganizuj<br/> zbiórke</Link>
                         </div>
                     </div>
