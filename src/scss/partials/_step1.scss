@@ -1,0 +1,50 @@
+.bear__container{
+  height: 80vh;
+  background-image: url("./../../assets/bear.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  .bear__box{
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 8%;
+    .bear__box-step{
+      font-size: 24px;
+      color: $color-darkgrey;
+      font-weight: 300;
+      margin-bottom: 3%;
+
+    }
+    .bear__box-header{
+      font-size: 36px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 4%;
+
+    }
+    .bear__box-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .checkbox__label{
+        font-size: 24px;
+        font-weight: 300;
+
+      }
+      .checkbox__input{
+        height: 40px;
+        width: 40px;
+        margin-right: 2%;
+
+      }
+    }
+  }
+}
+.checkbox__wrapper{
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}

@@ -2,9 +2,9 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 import decoration from "../assets/decoration.svg";
+import {Step1} from "./Step1";
 
 export const Form = () => {
-
     return (
         <>
             <div className="row collect">
@@ -57,15 +57,7 @@ export const Form = () => {
                     </div>
                 </div>
             </div>
-            <div className={"row yellow__box"}>
-                <div className={"col-7 yellow__box-wrapper"}>
-                    <h2 className={"yellow__box-header"}>Ważne!</h2>
-                    <p className={"yellow__box-text"}>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-                        wiedzieć komu najlepiej je przekazać.
-                    </p>
-                </div>
-
-            </div>
+            <Step1/>
         </>
 
     )
