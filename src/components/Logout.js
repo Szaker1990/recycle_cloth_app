@@ -4,8 +4,6 @@ import {HashLink} from "react-router-hash-link";
 import decoration from "../assets/decoration.svg";
 
 export const Logout = () => {
-
-
     return (
         <>
             <div className="row">

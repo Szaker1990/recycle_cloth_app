@@ -9,8 +9,7 @@ export const Login = () => {
         password: "",
     });
     const[emailError,setEmailError] = useState("");
-    const[passwordError,setPasswordError] = useState("")
-
+    const[passwordError,setPasswordError] = useState("");
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -23,14 +22,15 @@ export const Login = () => {
         e.preventDefault()
         if (user.email.length < 5 || !user.email.includes("@") || !user.email.includes(".")) {
             setEmailError("Podany email jest nieprawidłowy!");
-        } else {
+        }
+        else {
             setEmailError("");
         }
         if (user.password.length < 6) {
             setPasswordError("Podane hasło jest za krótkie!");
-        } else {
+        }
+        else {
             setPasswordError("");
-
         }
     }
     return (

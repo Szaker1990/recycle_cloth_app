@@ -3,7 +3,6 @@ import decoration from "../assets/decoration.svg";
 import signature from "../assets/Signature.svg";
 
 export const About = () => {
-
     return (
         <>
             <div id="about" className={"row section__about"}>

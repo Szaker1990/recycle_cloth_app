@@ -5,6 +5,7 @@ import refresh from "../assets/refresh.png";
 import scale from "../assets/scale.png";
 import shirt from "../assets/shirt.png"
 import {Link} from "react-router-dom";
+
 export const Steps = () => {
     return (
         <>

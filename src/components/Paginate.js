@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Paginate = ({items}) => {
-
     return (
         <>
             <div className="col-10 paginate__wrapper">

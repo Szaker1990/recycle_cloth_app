@@ -1,11 +1,10 @@
 import React from "react";
 
-export const PaginationButtons = ({postsPerPage, totalPosts, paginate,currPage}) => {
+export const PaginationButtons = ({postsPerPage, totalPosts, paginate, currPage}) => {
     const pageNumbers = []
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
-        pageNumbers.push(i)
+        pageNumbers.push(i);
     }
-
     return (
         <>
             <ul className="pagination__wrapper">

@@ -4,8 +4,6 @@ import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/decoration.svg";
 
 export const Header = () => {
-
-
     return (
         <>
             <div id="header" className={"nav__section row"}>
@@ -33,7 +31,6 @@ export const Header = () => {
                             <Link to={'/rejestracja'} className="content__box-link" href="#">zorganizuj<br/> zbiórke</Link>
                         </div>
                     </div>
-
                 </div>
             </div>
         </>

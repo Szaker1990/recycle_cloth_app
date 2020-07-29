@@ -1,21 +1,19 @@
 body{
   font-family: $font-base;
-  //background-image: url("./../../assets/photo.png");
 }
 .nav__section{
   height: 90vh;
-
 }
 .login__image{
   background-image: url("./../../assets/header__img.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-
 .login__container{
   display: flex;
   justify-content: flex-end;
   margin: 5% 15% 0 0;
+
   .login__container-login{
     display: flex;
     justify-content: center;
@@ -42,7 +40,6 @@ body{
     &:hover{
       border: 1px solid $color-yellow;
     }
-
   }
 }
 
@@ -51,7 +48,6 @@ body{
 
   .main__nav-list{
     display: flex;
-    //padding-left: 28%;
 
     .main__nav-item{
       margin-right: 30px;
@@ -65,7 +61,6 @@ body{
        border:0.75px solid $color-darkgrey;
      }
     }
-
   }
 }
 
@@ -75,15 +70,13 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .content__box-header{
     text-align: center;
     font-size: 38px;
     color: $color-darkgrey;
     margin: 20px 0;
     line-height: 1.4;
-  }
-  .content__box-img{
-
   }
   .content__box-buttons{
     margin-top: 15%;
@@ -109,5 +102,4 @@ body{
       line-height: 1.2;
     }
   }
-
 }

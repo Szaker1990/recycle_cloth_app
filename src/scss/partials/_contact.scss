@@ -36,6 +36,7 @@
   justify-content: space-between;
   width: 470px;
   background: transparent;
+
   .form__wrapper-box{
     display: flex;
     flex-direction: column;
@@ -80,7 +81,6 @@
     color: $color-grey;
     font-family: $font-base;
     background: transparent;
-
   }
 }
 .form__button-wrapper{

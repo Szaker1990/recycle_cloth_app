@@ -2,16 +2,16 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 import decoration from "../assets/decoration.svg";
+
 export const Register = () =>{
     const [user,setUser] = useState({
         email: "",
         password: "",
         password2: ""
     });
-    const[emailError,setEmailError] = useState("");
-    const[passwordError,setPasswordError] = useState("")
-    const[password2Error,setPassword2Error] = useState("")
-
+    const[emailError,setEmailError] = useState("");;
+    const[passwordError,setPasswordError] = useState("");
+    const[password2Error,setPassword2Error] = useState("");
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -24,18 +24,21 @@ export const Register = () =>{
         e.preventDefault()
         if (user.email.length < 5 || !user.email.includes("@") || !user.email.includes(".")) {
             setEmailError("Podany email jest nieprawidłowy!");
-        } else {
+        }
+        else {
             setEmailError("");
         }
         if (user.password.length < 6) {
             setPasswordError("Podane hasło jest za krótkie!");
-        } else {
+        }
+        else {
             setPasswordError("");
 
         }
-        if(user.password !== user.password2){
+        if(user.password !== user.password2) {
             setPassword2Error("Podane hasło jest rózne od pierwszego");
-        }else{
+        }
+        else {
             setPassword2Error("");
         }
     }
@@ -74,7 +77,7 @@ export const Register = () =>{
                                 <input  type={"password"} name={"password"}  onChange={handleChangeUserData}
                                         value={user.password} className={"login__form-password"}/>
                                 <p className={"error__message"}>{passwordError}</p>
-                                <label className={"login__form-label"}>Hasło</label>
+                                <label className={"login__form-label"}>Powtórz Hasło</label>
                                 <input  type={"password"} name={"password2"}  onChange={handleChangeUserData}
                                         value={user.password2} className={"login__form-password"}/>
                                 <p className={"error__message"}>{password2Error}</p>

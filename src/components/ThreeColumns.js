@@ -1,9 +1,6 @@
 import React from "react"
 
-
 export const ThreeColumns = () => {
-
-
     return (
         <>
             <div className={"row"} id="threecolumns">
@@ -29,10 +26,8 @@ export const ThreeColumns = () => {
                             vel enim a elit viverra elementuma. Aliquam erat volutpat.
                         </p>
                     </div>
-
                 </div>
             </div>
         </>
     )
-
 }

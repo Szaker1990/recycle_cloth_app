@@ -2,20 +2,21 @@ import React, {useEffect, useState} from "react";
 import decoration from "../assets/decoration.svg";
 import insta from "../assets/Instagram.png";
 import face from "../assets/Facebook.png";
+
 export const Contact = () => {
     const [userName, setUserName] = useState("");
     const [userEmail, setUserEmail] = useState("");
     const [userMessage, setUserMessage] = useState("");
     const [nameError, setNameError] = useState("");
     const [emailError, setEmailError] = useState("");
-    const [messageError, setMessageError] = useState("")
-    const [responseMessage,SetResponseMessage] = useState("")
+    const [messageError, setMessageError] = useState("");
+    const [responseMessage,SetResponseMessage] = useState("");
     const [user, setUser] = useState({
         name: userName,
         email: userEmail,
         message: userMessage
-    })
-    const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact'
+    });
+    const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
     const addNewUser = () =>{
         let newUser = {
             name: userName.trim(),
@@ -28,36 +29,39 @@ export const Contact = () => {
         addNewUser()
     },[userName,userEmail,userMessage])
     const handleSubmitData = () => {
-        if(userName.length <3 ){
+        if(userName.length <3 ) {
             setNameError("Podane imię jest nieprawidłowe!");
-        }else{
+        }
+        else {
             setNameError("");
         }
-        if(userEmail.length<5 || !userEmail.includes("@") || !userEmail.includes(".")){
+        if (userEmail.length<5 || !userEmail.includes("@") || !userEmail.includes(".")) {
             setEmailError("Podany email jest nieprawidłowy!");
-        }else{
+        }
+        else {
             setEmailError("");
         }
-        if(userMessage.length< 12){
+        if (userMessage.length< 12) {
             setMessageError("Wiadomość musi mieć 120 znaków!");
-        }else{
+        }
+        else {
             setMessageError("");
         }
     }
     const handleUserName = (e) => {
-        setUserName(e.target.value)
+        setUserName(e.target.value);
     }
     const handleUserEmail = (e) => {
-        setUserEmail(e.target.value)
+        setUserEmail(e.target.value);
     }
     const handleUserMessage = (e) => {
-        setUserMessage(e.target.value)
+        setUserMessage(e.target.value);
     }
     const sendForm = (e) => {
-        e.preventDefault()
-        handleSubmitData()
+        e.preventDefault();
+        handleSubmitData();
         console.log(userMessage.length);
-        if(userEmail.length > 1 && userName.length >1 && userMessage.length > 120){
+        if (userEmail.length > 1 && userName.length >1 && userMessage.length > 120) {
             fetch(ApiAdress,{
                 method: "POST",
                 body: JSON.stringify(user),
@@ -66,22 +70,24 @@ export const Contact = () => {
                 }
             })
                 .then((response) => {
-                    if(response.status === 200){
-                        console.log("SUCCESSS")
+                    if(response.status === 200) {
+                        console.log("SUCCESSS");
                         SetResponseMessage("Wiadomośc została wysłana! Wkrótce sie z Toba skontaktujemy")
-                    }else if(response.status === 400){
-                        console.log("SOMETHING WENT WRONG")
+                    }
+                    else if (response.status === 400) {
+                        console.log("SOMETHING WENT WRONG");
                     }
                 })
                 .then( data => console.log(data))
                 .catch( err => console.log(err));
-        }else{
+        }
+        else {
             return false
-            }
-            reset()
+             }
+            reset();
         }
 
-        const reset = () =>{
+        const reset = () => {
             setUserName("");
             setUserEmail("");
             setUserMessage("");

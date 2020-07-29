@@ -4,24 +4,13 @@
   align-items: center;
   font-size: 38px;
   margin: 50px 0;
-
-  .header__box-head{
-
-  }
 }
-
 .img__box{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-
-
-  .img__box-deco{
-
-  }
 }
-
 .steps__box{
   height: 350px;
   background-color: #F0F1F1;
@@ -38,20 +27,15 @@
   flex-direction: column;
   padding: 30px;
 
-  .box__card-img{
-
-  }
   .box__card-header{
     font-size: 18px;
     margin: 10px 0;
     padding: 10px 0;
-
   }
   .box__card-text{
     font-size: 16px;
     border-top: 0.75px solid $color-darkgrey;
     padding-top: 10px;
-
   }
 }
 
@@ -74,6 +58,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 }

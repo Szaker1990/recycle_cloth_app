@@ -5,6 +5,7 @@ import organization from "../data/organization";
 import local from "../data/local";
 import {Paginate} from "./Paginate";
 import {PaginationButtons} from "./PaginationButtons";
+
 export const Help = () => {
     const [helper, setHelper] = useState(foundations);
     const [currPage, setCurrPage] = useState(1);
@@ -14,39 +15,39 @@ export const Help = () => {
     const [activeLocal, setActiveLocal] = useState('help__button');
     const handleToFoundation = () => {
         setHelper(foundations);
-        whoIsActive()
-        setCurrPage(1)
+        whoIsActive();
+        setCurrPage(1);
     }
     const handleToOrganizations = () => {
         setHelper(organization);
-        whoIsActive()
-        setCurrPage(1)
+        whoIsActive();
+        setCurrPage(1);
     }
     const handleToLocals = () => {
         setHelper(local);
-        whoIsActive()
-        setCurrPage(1)
+        whoIsActive();
+        setCurrPage(1);
     }
     const paginate = (pageNumber) => {
-        setCurrPage(pageNumber)
+        setCurrPage(pageNumber);
     }
     const whoIsActive = () => {
         if (helper === foundations) {
-            setActiveFoundation("help__button active")
-            setActiveLocal("help__button")
-            setActiveOrg("help__button")
-        } else if(helper === organization){
-            setActiveOrg("help__button active")
-            setActiveFoundation("help__button")
-            setActiveLocal("help__button")
-        }else if(helper === local){
-            setActiveOrg("help__button ")
-            setActiveFoundation("help__button")
-            setActiveLocal("help__button active")
+            setActiveFoundation("help__button active");
+            setActiveLocal("help__button");
+            setActiveOrg("help__button");
+        } else if (helper === organization) {
+            setActiveOrg("help__button active");
+            setActiveFoundation("help__button");
+            setActiveLocal("help__button");
+        } else if (helper === local) {
+            setActiveOrg("help__button ");
+            setActiveFoundation("help__button");
+            setActiveLocal("help__button active");
         }
     }
     useEffect(() => {
-        whoIsActive()
+        whoIsActive();
     }, [handleToFoundation, handleToOrganizations, handleToLocals]);
     const indexOfLastHelper = currPage * helpersPerPage;
     const indexOfFirstHelper = indexOfLastHelper - helpersPerPage;
