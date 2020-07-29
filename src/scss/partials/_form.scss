@@ -68,4 +68,29 @@
     }
   }
 }
+.yellow__box{
+  background: $color-yellow;
+  height: 180px;
+
+  .yellow__box-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10%;
+    align-items: flex-start;
+
+    .yellow__box-header{
+      font-weight: 600;
+      font-size: 36px;
+      color: black;
+
+    }
+    .yellow__box-text{
+      font-size: 22px;
+      font-weight: 400;
+      color: $color-darkgrey;
+
+    }
+  }
+}
 
