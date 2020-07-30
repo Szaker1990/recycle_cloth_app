@@ -1,0 +1,104 @@
+.step3__container{
+  font-family: $font-base;
+  margin-top: 3%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 8%;
+
+  .step3__container-counter{
+    color: $color-darkgrey;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  .step3__form{
+
+    .step3__select-container{
+      margin-top: 4%;
+
+
+      .step3__select-header{
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 3%;
+
+      }
+      .step3__select{
+        background: transparent;
+        font-size: 24px;
+        font-weight: 300;
+        height: 50px;
+        width: 300px;
+
+        .step3__option{
+          background:#3C3C3C26;
+          margin: 2% 0;
+
+        }
+      }
+    }
+    .step3__recipient{
+      margin: 8% 0;
+
+      .step3__recipient-header{
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+
+      }
+      .step3__recipient-list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+
+        .step3__recipient-item{
+          border: 0.75px solid $color-darkgrey;
+          padding: 8px 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 1% 2% 1% 0;
+        }
+      }
+    }
+    .step3__input-container{
+      display: flex;
+      flex-direction: column;
+      margin: 7% 0;
+
+      .step3__input-label{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 3%;
+
+      }
+      .step3__input-area{
+        width: 500px;
+        border: 0.75px solid $color-darkgrey;
+        font-size: 24px;
+        background: transparent;
+        font-weight: 300;
+        color: $color-darkgrey;
+
+      }
+    }
+    .step3__buttons{
+      margin-top: 30%;
+
+      .step3__btn{
+        font-size: 24px;
+        font-weight: 300;
+        border: 0.75px solid $color-darkgrey;
+        padding: 18px 45px;
+        background: transparent;
+        font-family: $font-base;
+        cursor: pointer;
+        height: 80px;
+        width: 180px;
+        &:nth-of-type(2){
+          margin-left: 6%;
+        }
+      }
+    }
+  }
+}

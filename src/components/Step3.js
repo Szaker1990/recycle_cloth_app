@@ -2,7 +2,7 @@ import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 
-export const Step3 = ({currentStep,nextStep,prevStep}) => {
+export const Step3 = ({currentStep, nextStep, prevStep}) => {
 
     if (currentStep !== 3) {
         return null
@@ -14,8 +14,8 @@ export const Step3 = ({currentStep,nextStep,prevStep}) => {
             <div className={"row bear__container"}>
                 <div className={"step3__container"}>
                     <h4 className={"step3__container-counter"}>krok 3/4</h4>
-                    <form>
-                        <div>
+                    <form className={"step3__form"}>
+                        <div className={"step3__select-container"}>
                             <h3 className={"step3__select-header"}>Lokalizacja:</h3>
                             <select className={"step3__select"}>
                                 <option className={"step3__option"}>--Wybierz--</option>
@@ -36,9 +36,15 @@ export const Step3 = ({currentStep,nextStep,prevStep}) => {
                                 <li className={"step3__recipient-item"}>osobom starszym</li>
                             </ul>
                         </div>
-                        <div>
-                            <label>Wpisz nazwe konkretnej organizacji (opcjonlane)</label>
-                            <input type={"text"}/>
+                        <div className={"step3__input-container"}>
+                            <label className={"step3__input-label"}>Wpisz nazwe konkretnej organizacji
+                                (opcjonalne)
+                            </label>
+                            <input className={"step3__input-area"} type={"text"}/>
+                        </div>
+                        <div className={"step3__buttons"}>
+                            <button onClick={prevStep} className={"step3__btn"}>Wstecz</button>
+                            <button onClick={nextStep} className={"step3__btn"}>Dalej</button>
                         </div>
                     </form>
                 </div>
