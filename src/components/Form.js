@@ -4,6 +4,7 @@ import {HashLink} from "react-router-hash-link";
 import decoration from "../assets/decoration.svg";
 import {Step1} from "./Step1";
 import {Step2} from "./Step2";
+import {Step3} from "./Step3";
 
 export const Form = () => {
     const[currentStep,setCurrentStep] = useState(1);
@@ -68,6 +69,7 @@ export const Form = () => {
             </div>
             <Step1 currentStep={currentStep} nextStep={nextStep}/>
             <Step2 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
+            <Step3 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep} />
         </>
 
     )
