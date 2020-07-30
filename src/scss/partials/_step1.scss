@@ -10,6 +10,7 @@
     justify-content: flex-start;
     flex-direction: column;
     margin-left: 8%;
+
     .bear__box-step{
       font-size: 24px;
       color: $color-darkgrey;
@@ -29,16 +30,37 @@
       flex-direction: column;
       justify-content: center;
       
-      .checkbox__label{
-        font-size: 24px;
-        font-weight: 300;
+      .bear__box-wrapper{
+        margin: 3% 0;
 
+        .radio__label{
+          font-size: 24px;
+          font-weight: 300;
+        }
+        .radio__input{
+          height: 40px;
+          width: 40px;
+          margin-right: 2%;
+          box-sizing: border-box;
+          appearance: none;
+          background: transparent;
+          border: 0.75px solid $color-darkgrey;
+          &:checked{
+            background-color: $color-yellow;
+          }
+        }
       }
-      .checkbox__input{
-        height: 40px;
-        width: 40px;
-        margin-right: 2%;
+      .bear__box-buttons{
+        margin-top: 15%;
 
+        .bear__box-btn{
+          font-size: 24px;
+          font-weight: 300;
+          border: 0.75px solid $color-darkgrey;
+          padding: 18px 45px;
+          background: transparent;
+          font-family: $font-base;
+        }
       }
     }
   }
