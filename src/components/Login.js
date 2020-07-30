@@ -1,7 +1,5 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
 import decoration from "../assets/decoration.svg";
-import {HashLink} from 'react-router-hash-link';
 import {Navigation} from "./Navigation";
 
 export const Login = () => {

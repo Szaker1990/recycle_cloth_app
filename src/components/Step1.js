@@ -1,17 +1,15 @@
 import React from "react"
+import {Contact} from "./Contact";
+import {YellowLabel} from "./YellowLabel";
 
-export const Step1 = () => {
-
+export const Step1 = ({currentStep,nextStep}) => {
+    if (currentStep !== 1) {
+        return null
+    }
     return (
         <>
-            <div className={"row yellow__box"}>
-                <div className={"col-7 yellow__box-wrapper"}>
-                    <h2 className={"yellow__box-header"}>Ważne!</h2>
-                    <p className={"yellow__box-text"}>Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy
-                        wiedzieć komu najlepiej je przekazać.
-                    </p>
-                </div>
-            </div>
+            <YellowLabel text={"Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy\n" +
+            "wiedzieć komu najlepiej je przekazać."}/>
             <div className={"row bear__container"}>
                 <div className={"col-4 bear__box"}>
                     <h3 className={"bear__box-step"}>Krok 1/4</h3>
@@ -38,11 +36,12 @@ export const Step1 = () => {
                             <label className={"radio__label"}>inne</label>
                         </div>
                         <div className={"bear__box-buttons"}>
-                            <button className={"bear__box-btn"}>Dalej</button>
+                            <button onClick={nextStep} className={"bear__box-btn"}>Dalej</button>
                         </div>
                     </form>
                 </div>
             </div>
+            <Contact/>
         </>
     )
 }

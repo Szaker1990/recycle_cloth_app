@@ -32,6 +32,8 @@
       
       .bear__box-wrapper{
         margin: 3% 0;
+        display: flex;
+        align-items: center;
 
         .radio__label{
           font-size: 24px;
@@ -57,9 +59,11 @@
           font-size: 24px;
           font-weight: 300;
           border: 0.75px solid $color-darkgrey;
-          padding: 18px 45px;
           background: transparent;
           font-family: $font-base;
+          cursor: pointer;
+          height: 80px;
+          width: 180px;
         }
       }
     }

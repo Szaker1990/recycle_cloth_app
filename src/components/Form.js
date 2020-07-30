@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 import decoration from "../assets/decoration.svg";
 import {Step1} from "./Step1";
+import {Step2} from "./Step2";
 
 export const Form = () => {
+    const[currentStep,setCurrentStep] = useState(1);
+
+    const nextStep = () => {
+        setCurrentStep(prev => prev +1);
+    }
+    const prevStep = () => {
+        setCurrentStep( prev => prev -1);
+    }
     return (
         <>
             <div className="row collect">
@@ -57,7 +66,8 @@ export const Form = () => {
                     </div>
                 </div>
             </div>
-            <Step1/>
+            <Step1 currentStep={currentStep} nextStep={nextStep}/>
+            <Step2 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
         </>
 
     )
