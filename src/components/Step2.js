@@ -1,6 +1,7 @@
 import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
+import {Select} from "./Select";
 
 export const Step2 = ({currentStep, nextStep, prevStep}) => {
     if (currentStep !== 2) {
@@ -18,14 +19,7 @@ export const Step2 = ({currentStep, nextStep, prevStep}) => {
                     <form className={"step2__container-form"}>
                         <div className={"step2__form-wrapper"}>
                             <h4 className={"step2__form-header"}>Liczba 60l worków</h4>
-                            <select className={"step2__form-select"}>
-                                <option className={"step2__form-option"}>--Wybierz--</option>
-                                <option className={"step2__form-option"}>1</option>
-                                <option className={"step2__form-option"}>2</option>
-                                <option className={"step2__form-option"}>3</option>
-                                <option className={"step2__form-option"}>4</option>
-                                <option className={"step2__form-option"}>5</option>
-                            </select>
+                            <Select title={"— wybierz —"} items={[1,2,3,4,5]}/>
                         </div>
                         <div className={"step2__buttons-container"}>
                             <button onClick={prevStep} className={"step2__btn"}>Wstecz</button>

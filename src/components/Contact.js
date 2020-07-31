@@ -1,7 +1,5 @@
 import React, {useEffect, useState} from "react";
 import decoration from "../assets/decoration.svg";
-import insta from "../assets/Instagram.png";
-import face from "../assets/Facebook.png";
 import {Footer} from "./Footer";
 
 export const Contact = () => {

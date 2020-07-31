@@ -1,6 +1,7 @@
 import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
+import {Select} from "./Select";
 
 export const Step3 = ({currentStep, nextStep, prevStep}) => {
 
@@ -17,14 +18,9 @@ export const Step3 = ({currentStep, nextStep, prevStep}) => {
                     <form className={"step3__form"}>
                         <div className={"step3__select-container"}>
                             <h3 className={"step3__select-header"}>Lokalizacja:</h3>
-                            <select className={"step3__select"}>
-                                <option className={"step3__option"}>--Wybierz--</option>
-                                <option className={"step3__option"}>Warszawa</option>
-                                <option className={"step3__option"}>Poznań</option>
-                                <option className={"step3__option"}>Kraków</option>
-                                <option className={"step3__option"}>Wrocław</option>
-                                <option className={"step3__option"}>Gdańsk</option>
-                            </select>
+                            <div className={"select__wrapper"}>
+                            <Select title={"— wybierz —"} items={["Warszawa", "Poznań" ,"Wrocław","Gdańsk","Szczecin"]}/>
+                            </div>
                         </div>
                         <div className={"step3__recipient"}>
                             <h3 className={"step3__recipient-header"}>Komu chcesz pomóc?</h3>
