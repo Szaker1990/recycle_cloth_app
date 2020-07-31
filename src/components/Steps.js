@@ -7,6 +7,7 @@ import shirt from "../assets/shirt.png"
 import {Link} from "react-router-dom";
 
 export const Steps = () => {
+
     return (
         <>
             <div className={"row"} id="steps">

@@ -1,0 +1,55 @@
+.step4__container {
+  font-family: $font-base;
+  margin-top: 3%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 8%;
+
+  .step4__counter {
+    color: $color-darkgrey;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .step4__header {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 3% 0;
+  }
+
+  .step4__form {
+    display: flex;
+    margin-top: 10%;
+
+    .step4__form-wrapper {
+      
+      .step4__box__header{
+        font-size: 24px;
+        color: black;
+        font-weight: 600;
+      }
+
+      .step4__form-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5% 0;
+        width: 350px;
+
+        .step4__form-label {
+          font-size: 24px;
+          font-weight: 300;
+        }
+
+        .step4__form-input {
+          background: transparent;
+          border: 0.75px solid $color-darkgrey;
+          height: 30px;
+          width: 200px;
+
+        }
+      }
+    }
+  }
+}
