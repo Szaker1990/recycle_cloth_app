@@ -9,10 +9,12 @@ import {Step3} from "./Step3";
 export const Form = () => {
     const[currentStep,setCurrentStep] = useState(1);
 
-    const nextStep = () => {
+    const nextStep = (e) => {
+        e.preventDefault()
         setCurrentStep(prev => prev +1);
     }
-    const prevStep = () => {
+    const prevStep = (e) => {
+        e.preventDefault()
         setCurrentStep( prev => prev -1);
     }
     return (
