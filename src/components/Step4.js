@@ -35,22 +35,22 @@ export const Step4 = ({currentStep, nextStep, prevStep}) => {
                         <div className={"step4__form-wrapper"}>
                             <h2 className={"step4__box__header"}>Termin odbioru </h2>
                             <div className={"step4__form-box"}>
-                                <label></label>
-                                <input/>
+                                <label className={"step4__form-label"}>Data</label>
+                                <input className={"step4__form-input"} />
                             </div>
-                            <div>
-                                <label></label>
-                                <input/>
+                            <div className={"step4__form-box"}>
+                                <label className={"step4__form-label"}>Godzina</label>
+                                <input className={"step4__form-input"} />
                             </div>
-                            <div>
-                                <label></label>
-                                <textarea></textarea>
+                            <div className={"step4__form-box"}>
+                                <label className={"step4__form-label"}>Uwagi <br/> dla Kuriera</label>
+                                <textarea className={"step4__form-area"} cols={4} rows={4}></textarea>
                             </div>
                         </div>
                     </form>
-                    <div>
-                        <button onClick={prevStep}>Wstecz</button>
-                        <button onClick={nextStep}>Dalej</button>
+                    <div className={"step4__buttons-box"}>
+                        <button className={"step4__btn"} onClick={prevStep}>Wstecz</button>
+                        <button className={"step4__btn"} onClick={nextStep}>Dalej</button>
                     </div>
                 </div>
             </div>
