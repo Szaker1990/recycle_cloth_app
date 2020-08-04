@@ -75,7 +75,7 @@ export const Form = () => {
             <Step2 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Step3 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Step4 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
-            <Summary/>
+            <Summary currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
         </>
 
     )
