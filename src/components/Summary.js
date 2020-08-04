@@ -57,7 +57,7 @@ export const Summary = ({currentStep,nextStep,prevStep}) => {
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Uwagi<br/> dla Kuriera</p>
-                                <p className={"summary__data-text"}>sdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                <p className={"summary__data-text"}></p>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import {YellowLabel} from "./YellowLabel";
+import {Contact} from "./Contact";
 
 export const Step4 = ({currentStep, nextStep, prevStep}) => {
     if (currentStep !== 4) {
@@ -54,6 +55,7 @@ export const Step4 = ({currentStep, nextStep, prevStep}) => {
                     </div>
                 </div>
             </div>
+            <Contact/>
         </>
     )
 }

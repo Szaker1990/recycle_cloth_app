@@ -7,6 +7,7 @@ import {Step2} from "./Step2";
 import {Step3} from "./Step3";
 import {Step4} from "./Step4";
 import {Summary} from "./Summary";
+import {Greetings} from "./Greetings";
 
 export const Form = () => {
     const[currentStep,setCurrentStep] = useState(1);
@@ -76,6 +77,7 @@ export const Form = () => {
             <Step3 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Step4 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Summary currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
+            <Greetings currentStep={currentStep}/>
         </>
 
     )
