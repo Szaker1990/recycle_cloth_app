@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 import foundations from "../data/foundations";
 import organization from "../data/organization";
 import local from "../data/local";

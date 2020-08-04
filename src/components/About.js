@@ -1,5 +1,5 @@
 import React from "react"
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 import signature from "../assets/Signature.svg";
 
 export const About = () => {

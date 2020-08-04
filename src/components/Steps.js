@@ -1,5 +1,5 @@
 import React from "react"
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 import bag from "../assets/bag.png";
 import refresh from "../assets/refresh.png";
 import scale from "../assets/scale.png";

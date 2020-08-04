@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 import {Step1} from "./Step1";
 import {Step2} from "./Step2";
 import {Step3} from "./Step3";
 import {Step4} from "./Step4";
+import {Summary} from "./Summary";
 
 export const Form = () => {
     const[currentStep,setCurrentStep] = useState(1);
@@ -30,7 +31,7 @@ export const Form = () => {
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>
-                            <HashLink className={"main__nav-item"} to={"/#threecolumns"}>Start</HashLink>
+                            <HashLink className={"main__nav-item"} to={"/#header"}>Start</HashLink>
                             <HashLink className={"main__nav-item"} to={"/#steps"}>O co chodzi?</HashLink>
                             <HashLink className={"main__nav-item"} to={"/#about"}>O nas</HashLink>
                             <HashLink className={"main__nav-item"} to={"/#help"}>Fundacja i Organizacje</HashLink>
@@ -74,6 +75,7 @@ export const Form = () => {
             <Step2 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Step3 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
             <Step4 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
+            <Summary/>
         </>
 
     )

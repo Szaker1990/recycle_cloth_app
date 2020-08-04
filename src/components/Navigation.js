@@ -13,7 +13,7 @@ export const Navigation = () =>{
             </div>
             <div className={"main__nav"}>
                 <div className={"main__nav-list"}>
-                    <HashLink className={"main__nav-item"} to={"/#threecolumns"}>Start</HashLink>
+                    <HashLink className={"main__nav-item"} to={"/#header"}>Start</HashLink>
                     <HashLink className={"main__nav-item"} to={"/#steps"}>O co chodzi?</HashLink>
                     <HashLink className={"main__nav-item"} to={"/#about"}>O nas</HashLink>
                     <HashLink className={"main__nav-item"} to={"/#help"}>Fundacja i Organizacje</HashLink>

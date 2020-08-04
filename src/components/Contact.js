@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 import {Footer} from "./Footer";
 
 export const Contact = () => {

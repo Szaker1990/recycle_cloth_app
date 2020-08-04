@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink} from "react-scroll";
-import decoration from "../assets/decoration.svg";
+import decoration from "../assets/shirt.svg";
 
 export const Header = () => {
     return (
@@ -16,7 +16,7 @@ export const Header = () => {
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>
-                            <ScrollLink className={"main__nav-item"} to={"threecolumns"} smooth={true} duration={1000}>Start</ScrollLink>
+                            <ScrollLink className={"main__nav-item"} to={"header"} smooth={true} duration={1000}>Start</ScrollLink>
                             <ScrollLink className={"main__nav-item"} to={"steps"} smooth={true} duration={1000}>O co chodzi?</ScrollLink>
                             <ScrollLink className={"main__nav-item"} to={"about"} smooth={true} duration={1000}>O nas</ScrollLink>
                             <ScrollLink className={"main__nav-item"} to={"help"} smooth={true} duration={1000}>Fundacja i Organizacje</ScrollLink>
