@@ -2,7 +2,7 @@ import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 
-export const Step4 = ({currentStep, nextStep, prevStep}) => {
+export const Step4 = ({currentStep, nextStep, prevStep,dataChange}) => {
     if (currentStep !== 4) {
         return null
     }
@@ -18,34 +18,37 @@ export const Step4 = ({currentStep, nextStep, prevStep}) => {
                             <h2 className={"step4__box__header"}>Adres odbioru</h2>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Ulica</label>
-                                <input className={"step4__form-input"}/>
+                                <input onChange={dataChange} name={"street"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Miasto</label>
-                                <input className={"step4__form-input"}/>
+                                <input onChange={dataChange} name={"city"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Kod<br/>pocztowy</label>
-                                <input className={"step4__form-input"}/>
+                                <input onChange={dataChange}  name={"postCode"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Numer<br/>telefonu</label>
-                                <input className={"step4__form-input"}/>
+                                <input onChange={dataChange} name={"phoneNumber"} className={"step4__form-input"}/>
                             </div>
                         </div>
                         <div className={"step4__form-wrapper"}>
                             <h2 className={"step4__box__header"}>Termin odbioru </h2>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Data</label>
-                                <input className={"step4__form-input"} />
+                                <input onChange={dataChange} name={"date"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Godzina</label>
-                                <input className={"step4__form-input"} />
+                                <input onChange={dataChange} name={"time"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Uwagi <br/> dla Kuriera</label>
-                                <textarea className={"step4__form-area"} cols={4} rows={4}></textarea>
+                                <textarea className={"step4__form-area"} onChange={dataChange} cols={4}
+                                          name={"notice"} rows={4}>
+
+                                </textarea>
                             </div>
                         </div>
                     </form>

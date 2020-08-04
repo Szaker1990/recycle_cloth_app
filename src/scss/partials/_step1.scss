@@ -16,14 +16,12 @@
       color: $color-darkgrey;
       font-weight: 300;
       margin-bottom: 3%;
-
     }
     .bear__box-header{
       font-size: 36px;
       font-weight: 600;
       color: black;
       margin-bottom: 4%;
-
     }
     .bear__box-form{
       display: flex;
@@ -53,7 +51,8 @@
         }
       }
       .bear__box-buttons{
-        margin-top: 150px;
+        margin-top: 120px;
+        margin-left: 3%;
 
         .bear__box-btn{
           font-size: 24px;

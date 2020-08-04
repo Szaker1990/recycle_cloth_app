@@ -4,7 +4,7 @@ import Icon from "../assets/shirt.png";
 import refresh from "../assets/refresh.png";
 import {YellowLabel} from "./YellowLabel";
 
-export const Summary = ({currentStep,nextStep,prevStep}) => {
+export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,date,time,notice ,postCode,phone}) => {
     if (currentStep !== 5) {
         return null
     }
@@ -15,14 +15,14 @@ export const Summary = ({currentStep,nextStep,prevStep}) => {
                 <div className="col-6 summary">
                     <div className={"summary__container-header"}>
                         <h2 className={"summary__header"}>Podsumowanie Twojej darowizny</h2>
-                        <h4 className={"summary__counter"}>Oddajesz:</h4>
+                        <h4 className={"summary__counter"}>Oddajesz: {who}</h4>
                         <div className={"summary__wrapper"}>
                             <img className={"summary__img"} src={Icon}/>
-                            <p className={"summary__description"}>4 worki, ubrania w dobrym stanie, dzieciom</p>
+                            <p className={"summary__description"}>4 {items}</p>
                         </div>
                         <div className={"summary__wrapper"}>
                             <img className={"summary__img"} src={refresh}/>
-                            <p className={"summary__description"}>dla lokalizacji: Warszawa</p>
+                            <p className={"summary__description"}>dla lokalizacji: {city}</p>
                         </div>
                     </div>
                     <div className={"summary__container-data"}>
@@ -30,34 +30,34 @@ export const Summary = ({currentStep,nextStep,prevStep}) => {
                             <h4 className={"data__handler-header"}>Adres odbioru:</h4>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Ulica</p>
-                                <p className={"summary__data-text"}>Prosta 51</p>
+                                <p className={"summary__data-text"}>{street}</p>
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Miasto</p>
-                                <p className={"summary__data-text"}>Warszawa</p>
+                                <p className={"summary__data-text"}>{city}</p>
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Kod <br/> Pocztowy</p>
-                                <p className={"summary__data-text"}>90-290</p>
+                                <p className={"summary__data-text"}>{postCode}</p>
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Numer <br/> Telefonu</p>
-                                <p className={"summary__data-text"}>478 489 490</p>
+                                <p className={"summary__data-text"}>{phone}</p>
                             </div>
                         </div>
                         <div className={"summary__data-handler"}>
                             <h4 className={"data__handler-header"}>Termin odbioru:</h4>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Data</p>
-                                <p className={"summary__data-text"}>17.10.2020</p>
+                                <p className={"summary__data-text"}>{date}</p>
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Godzina</p>
-                                <p className={"summary__data-text"}>17:30</p>
+                                <p className={"summary__data-text"}>{time}</p>
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Uwagi<br/> dla Kuriera</p>
-                                <p className={"summary__data-text"}></p>
+                                <p className={"summary__data-text"}>{notice}</p>
                             </div>
                         </div>
                     </div>

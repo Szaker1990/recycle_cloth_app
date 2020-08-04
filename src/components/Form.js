@@ -10,15 +10,50 @@ import {Summary} from "./Summary";
 import {Greetings} from "./Greetings";
 
 export const Form = () => {
-    const[currentStep,setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(1);
+    const [giveAway, setGiveaway] = useState({
+        collection: "",
+        bags: "",
+        recipients: {
+            kids: false,
+            singleMother: false,
+            homeless: false,
+            disabled: false,
+            elder: false
+        },
+        organization: "",
+        street: "",
+        city: "",
+        postCode: "",
+        phoneNumber: 0,
+        date: "",
+        time: "",
+        notice: ""
 
+    })
+    const handleChangeGiveAwayData = e => {
+        const {name, value} = e.target;
+        setGiveaway(prev => ({
+                ...prev,
+                [name]: value
+            })
+        );
+    }
+    const handleChangeGiveAwayDataById = e => {
+        const {id, value} = e.target;
+        setGiveaway(prev => ({
+                ...prev,
+                [id]: !value
+            })
+        );
+    }
     const nextStep = (e) => {
         e.preventDefault()
-        setCurrentStep(prev => prev +1);
+        setCurrentStep(prev => prev + 1);
     }
     const prevStep = (e) => {
         e.preventDefault()
-        setCurrentStep( prev => prev -1);
+        setCurrentStep(prev => prev - 1);
     }
     return (
         <>
@@ -72,11 +107,16 @@ export const Form = () => {
                     </div>
                 </div>
             </div>
-            <Step1 currentStep={currentStep} nextStep={nextStep}/>
-            <Step2 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
-            <Step3 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
-            <Step4 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
-            <Summary currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}/>
+            <Step1 currentStep={currentStep} nextStep={nextStep} dataChange={handleChangeGiveAwayData}/>
+            <Step2 data={giveAway.bags} currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}
+                   dataChange={handleChangeGiveAwayData}/>
+            <Step3 recData={giveAway.recipients} handleRecipients={handleChangeGiveAwayDataById}
+                   currentStep={currentStep} nextStep={nextStep} prevStep={prevStep} orgChange={handleChangeGiveAwayData}/>
+            <Step4 currentStep={currentStep} nextStep={nextStep} prevStep={prevStep}
+                   dataChange={handleChangeGiveAwayData}/>
+            <Summary street={giveAway.street} items={giveAway.collection} currentStep={currentStep} nextStep={nextStep}
+                     prevStep={prevStep} city={giveAway.city} who={giveAway.organization} phone={giveAway.phoneNumber}
+            postCode={giveAway.postCode} date={giveAway.date} time={giveAway.time} notice={giveAway.notice}/>
             <Greetings currentStep={currentStep}/>
         </>
 

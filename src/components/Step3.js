@@ -1,24 +1,24 @@
-import React, {useState} from "react";
+import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step3 = ({currentStep, nextStep, prevStep}) => {
-    const [recipients,setRecipients] = useState({
-        kids: false,
-        singleMother: false,
-        homeless: false,
-        disabled: false,
-        elder: false
-    })
-    const handleRecipient = (e) =>{
-            const {name,value} = e.target;
-            setRecipients(prev => ({
-                    ...prev,
-                    [name]: !value
-                })
-            );
-    }
+export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,orgChange}) => {
+    // const [recipients,setRecipients] = useState({
+    //     kids: false,
+    //     singleMother: false,
+    //     homeless: false,
+    //     disabled: false,
+    //     elder: false
+    // })
+    // const handleRecipient = (e) =>{
+    //         const {name,value} = e.target;
+    //         setRecipients(prev => ({
+    //                 ...prev,
+    //                 [name]: !value
+    //             })
+    //         );
+    // }
     if (currentStep !== 3) {
         return null
     }
@@ -39,18 +39,18 @@ export const Step3 = ({currentStep, nextStep, prevStep}) => {
                         <div className={"step3__recipient"}>
                             <h3 className={"step3__recipient-header"}>Komu chcesz pomóc?</h3>
                             <ul className={"step3__recipient-list"}>
-                                <li value={recipients.kids} className={"step3__recipient-item"} onClick={handleRecipient} >dzieciom</li>
-                                <li value={recipients.singleMother} className={"step3__recipient-item"} onClick={handleRecipient}>samotnym matkom</li>
-                                <li className={"step3__recipient-item"}>bezdomnym</li>
-                                <li className={"step3__recipient-item"}>niepełnosprawnym</li>
-                                <li className={"step3__recipient-item"}>osobom starszym</li>
+                                <li className={"step3__recipient-item"} id={"kids"} value={true} onClick={handleRecipients}>dzieciom</li>
+                                <li className={"step3__recipient-item"} onClick={handleRecipients}>samotnym matkom</li>
+                                <li className={"step3__recipient-item"} onClick={handleRecipients}>bezdomnym</li>
+                                <li className={"step3__recipient-item"} onClick={handleRecipients}>niepełnosprawnym</li>
+                                <li className={"step3__recipient-item"} onClick={handleRecipients}>osobom starszym</li>
                             </ul>
                         </div>
                         <div className={"step3__input-container"}>
                             <label className={"step3__input-label"}>Wpisz nazwe konkretnej organizacji
                                 (opcjonalne)
                             </label>
-                            <input className={"step3__input-area"} type={"text"}/>
+                            <input onChange={orgChange} className={"step3__input-area"} type={"text"} name={"organization"}/>
                         </div>
                         <div className={"step3__buttons"}>
                             <button onClick={prevStep} className={"step3__btn"}>Wstecz</button>

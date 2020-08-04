@@ -3,7 +3,7 @@ import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step2 = ({currentStep, nextStep, prevStep}) => {
+export const Step2 = ({currentStep, nextStep, prevStep,data,dataChange}) => {
     if (currentStep !== 2) {
         return null
     }
@@ -19,7 +19,7 @@ export const Step2 = ({currentStep, nextStep, prevStep}) => {
                     <form className={"step2__container-form"}>
                         <div className={"step2__form-wrapper"}>
                             <h4 className={"step2__form-header"}>Liczba 60l worków</h4>
-                            <Select title={"— wybierz —"} items={[1,2,3,4,5]}/>
+                            <Select  title={"— wybierz —"} items={[1,2,3,4,5]}/>
                         </div>
                         <div className={"step2__buttons-container"}>
                             <button onClick={prevStep} className={"step2__btn"}>Wstecz</button>
