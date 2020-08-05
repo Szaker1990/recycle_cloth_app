@@ -4,7 +4,7 @@ import Icon from "../assets/shirt.png";
 import refresh from "../assets/refresh.png";
 import {YellowLabel} from "./YellowLabel";
 
-export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,date,time,notice ,postCode,phone}) => {
+export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,date,time,notice ,postCode,phone,from,howMuch}) => {
     if (currentStep !== 5) {
         return null
     }
@@ -18,11 +18,11 @@ export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,dat
                         <h4 className={"summary__counter"}>Oddajesz: {who}</h4>
                         <div className={"summary__wrapper"}>
                             <img alt={"refresh"} className={"summary__img"} src={Icon}/>
-                            <p className={"summary__description"}>4 {items}</p>
+                            <p className={"summary__description"}>{howMuch} {items}</p>
                         </div>
                         <div className={"summary__wrapper"}>
                             <img alt={"tshirt"} className={"summary__img"} src={refresh}/>
-                            <p className={"summary__description"}>dla lokalizacji: {city}</p>
+                            <p className={"summary__description"}>dla lokalizacji:{from}</p>
                         </div>
                     </div>
                     <div className={"summary__container-data"}>

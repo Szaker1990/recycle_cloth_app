@@ -1,8 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Arrow from './.././assets/Arrow-Down.png'
 export const Select = ({title, items,ident,dataChange}) => {
     const [open, setOpen] = useState(false);
-    const [checked, setChecked] = useState('');
+    const [checked,setChecked] = useState('');
     const handleOpen = () => {
         setOpen(!open)
     }
@@ -12,7 +12,10 @@ export const Select = ({title, items,ident,dataChange}) => {
         }
         return checked
     }
-
+    const handleChecked = (e) => {
+        dataChange(e)
+        setChecked(e.target.innerText)
+    }
     return (
         <div>
             <div className={'select__box'} onClick={handleOpen}>
@@ -22,7 +25,7 @@ export const Select = ({title, items,ident,dataChange}) => {
                 {open && (
                     <ul className={'select__list'} onClick={handleOpen}>
                         {items.map((item, index) => (
-                            <li  className={'select__item'} key={index} id={ident}  onClick={dataChange}>{item}</li>
+                            <li  className={'select__item'} key={index} id={ident}  onClick={handleChecked}>{item}</li>
                         ))}
                     </ul>
                 )}

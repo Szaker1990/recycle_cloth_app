@@ -13,8 +13,8 @@ export const Form = () => {
     const [currentStep, setCurrentStep] = useState(1)
     const [giveAway, setGiveaway] = useState({
         collection: "",
-        bags: "",
-        cityTo: "",
+        bags: "10",
+        cityTo: "Pomiechówek",
         recipients: {
             kids: false,
             singleMother: false,
@@ -46,7 +46,6 @@ export const Form = () => {
                 [id]: e.target.innerText
             })
         );
-        console.log(e.target.innerText);
     }
     const nextStep = (e) => {
         e.preventDefault()
@@ -115,7 +114,8 @@ export const Form = () => {
                    currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
-                   dataChange={handleChangeGiveAwayDataById}/>
+                   dataChange={handleChangeGiveAwayDataById}
+                   head={giveAway.bags}/>
             <Step3 recData={giveAway.recipients}
                    dataChange={handleChangeGiveAwayDataById}
                    currentStep={currentStep}
@@ -137,7 +137,9 @@ export const Form = () => {
                      postCode={giveAway.postCode}
                      date={giveAway.date}
                      time={giveAway.time}
-                     notice={giveAway.notice}/>
+                     notice={giveAway.notice}
+                     howMuch={giveAway.bags}
+                     from={giveAway.cityTo}/>
             <Greetings currentStep={currentStep}/>
         </>
 

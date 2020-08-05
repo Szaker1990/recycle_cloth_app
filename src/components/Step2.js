@@ -3,7 +3,7 @@ import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step2 = ({currentStep, nextStep, prevStep,data,dataChange}) => {
+export const Step2 = ({currentStep, nextStep, prevStep,dataChange}) => {
     if (currentStep !== 2) {
         return null
     }

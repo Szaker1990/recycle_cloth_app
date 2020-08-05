@@ -18,7 +18,7 @@ export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,
                         <div className={"step3__select-container"}>
                             <h3 className={"step3__select-header"}>Lokalizacja:</h3>
                             <div className={"select__wrapper"}>
-                            <Select dataChange={dataChange} ident={"cityTo"}  title={"— wybierz —"} items={["Warszawa","Poznań","Sosnowiec","Szczecin"]}/>
+                            <Select dataChange={dataChange} ident={"cityTo"}  title={"— wybierz —"} items={["Warszawa","Poznań","Sosnowiec","Szczecin","Serock"]}/>
                             </div>
                         </div>
                         <div className={"step3__recipient"}>
