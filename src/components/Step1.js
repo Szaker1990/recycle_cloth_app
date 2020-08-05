@@ -2,7 +2,7 @@ import React from "react"
 import {Contact} from "./Contact";
 import {YellowLabel} from "./YellowLabel";
 
-export const Step1 = ({currentStep,nextStep,dataChange,obj}) => {
+export const Step1 = ({currentStep,nextStep,dataChange}) => {
     if (currentStep !== 1) {
         return null
     }

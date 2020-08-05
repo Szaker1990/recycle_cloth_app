@@ -17,11 +17,11 @@ export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,dat
                         <h2 className={"summary__header"}>Podsumowanie Twojej darowizny</h2>
                         <h4 className={"summary__counter"}>Oddajesz: {who}</h4>
                         <div className={"summary__wrapper"}>
-                            <img className={"summary__img"} src={Icon}/>
+                            <img alt={"refresh"} className={"summary__img"} src={Icon}/>
                             <p className={"summary__description"}>4 {items}</p>
                         </div>
                         <div className={"summary__wrapper"}>
-                            <img className={"summary__img"} src={refresh}/>
+                            <img alt={"tshirt"} className={"summary__img"} src={refresh}/>
                             <p className={"summary__description"}>dla lokalizacji: {city}</p>
                         </div>
                     </div>

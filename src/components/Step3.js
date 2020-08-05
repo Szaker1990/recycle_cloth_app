@@ -3,22 +3,7 @@ import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,orgChange}) => {
-    // const [recipients,setRecipients] = useState({
-    //     kids: false,
-    //     singleMother: false,
-    //     homeless: false,
-    //     disabled: false,
-    //     elder: false
-    // })
-    // const handleRecipient = (e) =>{
-    //         const {name,value} = e.target;
-    //         setRecipients(prev => ({
-    //                 ...prev,
-    //                 [name]: !value
-    //             })
-    //         );
-    // }
+export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,orgChange,dataChange}) => {
     if (currentStep !== 3) {
         return null
     }
@@ -33,14 +18,16 @@ export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,
                         <div className={"step3__select-container"}>
                             <h3 className={"step3__select-header"}>Lokalizacja:</h3>
                             <div className={"select__wrapper"}>
-                            <Select title={"— wybierz —"} items={["Warszawa", "Poznań" ,"Wrocław","Gdańsk","Szczecin"]}/>
+                            <Select dataChange={dataChange} ident={"cityTo"}  title={"— wybierz —"} items={["Warszawa","Poznań","Sosnowiec","Szczecin"]}/>
                             </div>
                         </div>
                         <div className={"step3__recipient"}>
                             <h3 className={"step3__recipient-header"}>Komu chcesz pomóc?</h3>
                             <ul className={"step3__recipient-list"}>
                                 <li className={"step3__recipient-item"} id={"kids"} value={true} onClick={handleRecipients}>dzieciom</li>
-                                <li className={"step3__recipient-item"} onClick={handleRecipients}>samotnym matkom</li>
+                                <li className={"step3__recipient-item"} onClick={handleRecipients}>
+                                    <input type={"checkbox"} className={"test-1"}/>
+                                    <p className={"test-2"}>samotnym matka</p></li>
                                 <li className={"step3__recipient-item"} onClick={handleRecipients}>bezdomnym</li>
                                 <li className={"step3__recipient-item"} onClick={handleRecipients}>niepełnosprawnym</li>
                                 <li className={"step3__recipient-item"} onClick={handleRecipients}>osobom starszym</li>
