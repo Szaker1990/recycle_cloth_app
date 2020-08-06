@@ -1,9 +1,16 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step2 = ({currentStep, nextStep, prevStep,dataChange}) => {
+export const Step2 = ({currentStep, nextStep, prevStep,dataChange,head}) => {
+    const[disabled,setDisabled] = useState(true);
+    const enableButton = () => {
+        head > 0 ? setDisabled(false) : setDisabled(true)
+    }
+    useEffect(() => {
+        enableButton()
+    })
     if (currentStep !== 2) {
         return null
     }
@@ -23,7 +30,7 @@ export const Step2 = ({currentStep, nextStep, prevStep,dataChange}) => {
                         </div>
                         <div className={"step2__buttons-container"}>
                             <button onClick={prevStep} className={"step2__btn"}>Wstecz</button>
-                            <button onClick={nextStep} className={"step2__btn"}>Dalej</button>
+                            <button onClick={nextStep} disabled={disabled} className={"step2__btn"}>Dalej</button>
                         </div>
                     </form>
                 </div>

@@ -1,12 +1,17 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange}) => {
-    if (currentStep !== 3) {
-        return null
+export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange,cityTo}) => {
+    const[disabled,setDisabled] = useState(true);
+    const enableButton = () => {
+        cityTo.length > 0 ? setDisabled(false) : setDisabled(true)
     }
+    useEffect(() => {
+        enableButton()
+    })
+
     const setBg = (e) => {
         if (e.target.className === "step3__recipient-item") {
             e.target.className = "step3__recipient-itemYellow"
@@ -14,6 +19,9 @@ export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange}) =>
              {
             e.target.className = "step3__recipient-item"
         }
+    }
+    if (currentStep !== 3) {
+        return null
     }
     return (
         <>
@@ -47,7 +55,7 @@ export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange}) =>
                         </div>
                         <div className={"step3__buttons"}>
                             <button onClick={prevStep} className={"step3__btn"}>Wstecz</button>
-                            <button onClick={nextStep} className={"step3__btn"}>Dalej</button>
+                            <button onClick={nextStep} disabled={disabled} className={"step3__btn"}>Dalej</button>
                         </div>
                     </form>
                 </div>

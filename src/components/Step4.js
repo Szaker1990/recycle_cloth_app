@@ -2,7 +2,13 @@ import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 
-export const Step4 = ({currentStep, nextStep, prevStep,dataChange}) => {
+export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street}) => {
+
+    const handleForm = () => {
+        if(street.length < 2){
+            return false
+        }
+    }
     if (currentStep !== 4) {
         return null
     }
@@ -13,12 +19,12 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange}) => {
                 <div className={"step4__container"}>
                     <h4 className={"step4__counter"}>Krok 4/4</h4>
                     <h2 className={"step4__header"}>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
-                    <form className={"step4__form"}>
+                    <form onSubmit={handleForm} className={"step4__form"}>
                         <div className={"step4__form-wrapper"}>
                             <h2 className={"step4__box__header"}>Adres odbioru</h2>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Ulica</label>
-                                <input onChange={dataChange} name={"street"} className={"step4__form-input"}/>
+                                <input onChange={dataChange} value={street} name={"street"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Miasto</label>

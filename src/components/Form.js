@@ -111,22 +111,22 @@ export const Form = () => {
                    nextStep={nextStep}
                    dataChange={handleChangeGiveAwayData}
                    data={giveAway.collection}/>
-            <Step2 data={giveAway.bags}
-                   currentStep={currentStep}
+            <Step2 currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
                    dataChange={handleChangeGiveAwayDataById}
                    head={giveAway.bags}/>
-            <Step3 recData={giveAway.recipients}
-                   dataChange={handleChangeGiveAwayDataById}
+            <Step3 dataChange={handleChangeGiveAwayDataById}
                    currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
-                   orgChange={handleChangeGiveAwayData}/>
+                   orgChange={handleChangeGiveAwayData}
+                   cityTo={giveAway.cityTo}/>
             <Step4 currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
-                   dataChange={handleChangeGiveAwayData}/>
+                   dataChange={handleChangeGiveAwayData}
+                   street={giveAway.street}/>
             <Summary street={giveAway.street}
                      items={giveAway.collection}
                      currentStep={currentStep}
@@ -143,6 +143,5 @@ export const Form = () => {
                      from={giveAway.cityTo}/>
             <Greetings currentStep={currentStep}/>
         </>
-
     )
 }
