@@ -1,8 +1,16 @@
-import React from "react"
+import React, {useEffect, useState} from "react"
 import {Contact} from "./Contact";
 import {YellowLabel} from "./YellowLabel";
 
-export const Step1 = ({currentStep,nextStep,dataChange}) => {
+export const Step1 = ({currentStep,nextStep,dataChange,data}) => {
+    const[disabled,setDisabled] = useState(true)
+
+    const enableButton = () => {
+        (data.length >0) ? setDisabled(false) : setDisabled(true)
+    }
+    useEffect(() =>{
+        enableButton()
+    })
     if (currentStep !== 1) {
         return null
     }
@@ -36,7 +44,7 @@ export const Step1 = ({currentStep,nextStep,dataChange}) => {
                             <label className={"radio__label"}>inne</label>
                         </div>
                         <div className={"bear__box-buttons"}>
-                            <button onClick={nextStep} className={"bear__box-btn"}>Dalej</button>
+                            <button onClick={nextStep} disabled={disabled} className={"bear__box-btn"}>Dalej</button>
                         </div>
                     </form>
                 </div>

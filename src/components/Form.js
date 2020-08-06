@@ -13,8 +13,8 @@ export const Form = () => {
     const [currentStep, setCurrentStep] = useState(1)
     const [giveAway, setGiveaway] = useState({
         collection: "",
-        bags: "10",
-        cityTo: "Pomiechówek",
+        bags: "",
+        cityTo: "",
         recipients: {
             kids: false,
             singleMother: false,
@@ -109,7 +109,8 @@ export const Form = () => {
             </div>
             <Step1 currentStep={currentStep}
                    nextStep={nextStep}
-                   dataChange={handleChangeGiveAwayData}/>
+                   dataChange={handleChangeGiveAwayData}
+                   data={giveAway.collection}/>
             <Step2 data={giveAway.bags}
                    currentStep={currentStep}
                    nextStep={nextStep}

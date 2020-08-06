@@ -3,9 +3,17 @@ import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
 
-export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,orgChange,dataChange}) => {
+export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange}) => {
     if (currentStep !== 3) {
         return null
+    }
+    const setBg = (e) => {
+        if (e.target.className === "step3__recipient-item") {
+            e.target.className = "step3__recipient-itemYellow"
+        } else
+             {
+            e.target.className = "step3__recipient-item"
+        }
     }
     return (
         <>
@@ -24,18 +32,16 @@ export const Step3 = ({currentStep, nextStep, prevStep,handleRecipients,recData,
                         <div className={"step3__recipient"}>
                             <h3 className={"step3__recipient-header"}>Komu chcesz pomóc?</h3>
                             <ul className={"step3__recipient-list"}>
-                                <li className={"step3__recipient-item"} id={"kids"} value={true} onClick={handleRecipients}>dzieciom</li>
-                                <li className={"step3__recipient-item"} onClick={handleRecipients}>
-                                    <input type={"checkbox"} className={"test-1"}/>
-                                    <p className={"test-2"}>samotnym matka</p></li>
-                                <li className={"step3__recipient-item"} onClick={handleRecipients}>bezdomnym</li>
-                                <li className={"step3__recipient-item"} onClick={handleRecipients}>niepełnosprawnym</li>
-                                <li className={"step3__recipient-item"} onClick={handleRecipients}>osobom starszym</li>
+                                <li className={"step3__recipient-item"} onClick={setBg} >dzieciom</li>
+                                <li className={"step3__recipient-item"} onClick={setBg}>matka</li>
+                                <li className={"step3__recipient-item"} onClick={setBg}>bezdomnym</li>
+                                <li className={"step3__recipient-item"} onClick={setBg}>niepełnosprawnym</li>
+                                <li className={"step3__recipient-item"} onClick={setBg}>osobom starszym</li>
                             </ul>
                         </div>
                         <div className={"step3__input-container"}>
-                            <label className={"step3__input-label"}>Wpisz nazwe konkretnej organizacji
-                                (opcjonalne)
+                            <label className={"step3__input-label"}>
+                                Wpisz nazwe konkretnej organizacji (opcjonalne)
                             </label>
                             <input onChange={orgChange} className={"step3__input-area"} type={"text"} name={"organization"}/>
                         </div>

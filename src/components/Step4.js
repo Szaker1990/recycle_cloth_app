@@ -47,7 +47,6 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange}) => {
                                 <label className={"step4__form-label"}>Uwagi <br/> dla Kuriera</label>
                                 <textarea className={"step4__form-area"} onChange={dataChange} cols={4}
                                           name={"notice"} rows={4}>
-
                                 </textarea>
                             </div>
                         </div>
