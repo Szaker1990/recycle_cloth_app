@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import decoration from "../assets/shirt.svg";
 import {Navigation} from "./Navigation";
+import {loginFire} from "../Firebase/authorization";
+import {useHistory} from "react-router-dom";
 
 export const Login = () => {
     const [user,setUser] = useState({
@@ -9,6 +11,7 @@ export const Login = () => {
     });
     const[emailError,setEmailError] = useState("");
     const[passwordError,setPasswordError] = useState("");
+    const history = useHistory();
     const handleChangeUserData = e => {
         const {name, value} = e.target;
         setUser(prev => ({
@@ -17,7 +20,7 @@ export const Login = () => {
             })
         );
     }
-    const handleLogin = (e) => {
+    async function handleLogin (e){
         e.preventDefault()
         if (user.email.length < 5 || !user.email.includes("@") || !user.email.includes(".")) {
             setEmailError("Podany email jest nieprawidłowy!");
@@ -30,6 +33,12 @@ export const Login = () => {
         }
         else {
             setPasswordError("");
+        }
+        try {
+            await loginFire(user.email, user.password);
+            history.push("/");
+        } catch (err) {
+            setEmailError(err.message);
         }
     }
     return (
@@ -54,7 +63,7 @@ export const Login = () => {
                         </div>
                         <div className={"login__button-wrapper"}>
                             <button className={"btn__register"}>Załóż konto</button>
-                            <input className={"active"} type={"submit"} value={"Zaloguj sie"}/>
+                            <input onClick={handleLogin} className={"active"} type={"submit"} value={"Zaloguj sie"}/>
                         </div>
                     </form>
                 </div>

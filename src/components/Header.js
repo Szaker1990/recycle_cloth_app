@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/shirt.svg";
 
 export const Header = () => {
+    const[isLogged,setIsLogged] = useState(false)
+    const[userEmail,setUserEmail] = useState("")
+    const handleLogged = () => {
+        setIsLogged(true)
+    }
     return (
         <>
             <div id="header" className={"nav__section row"}>

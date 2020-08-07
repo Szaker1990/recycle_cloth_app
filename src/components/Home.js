@@ -7,6 +7,7 @@ import {Help} from "./Help";
 import {Contact} from "./Contact";
 
 export const Home = () => {
+
     return (
         <>
             <Header/>
