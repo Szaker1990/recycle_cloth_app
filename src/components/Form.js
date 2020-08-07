@@ -8,9 +8,11 @@ import {Step3} from "./Step3";
 import {Step4} from "./Step4";
 import {Summary} from "./Summary";
 import {Greetings} from "./Greetings";
+import {auth} from "../Firebase/firebase";
+import {logOutFire} from "../Firebase/authorization";
 
 export const Form = () => {
-    const [currentStep, setCurrentStep] = useState(1)
+    const [currentStep, setCurrentStep] = useState(1);
     const [giveAway, setGiveaway] = useState({
         collection: "",
         bags: "",
@@ -61,8 +63,8 @@ export const Form = () => {
                 <div className="col-6 sweat__img"></div>
                 <div className={"col-6"}>
                     <div className={"login__container"}>
-                        <h3 className={"user__name"}>Witaj ŁukaszTo@gmail.com</h3>
-                        <Link to={'/logowanie'} className="login__container-login" href="#">Zaloguj</Link>
+                        <h3 className={"user__name"}>Witaj {auth.currentUser.email}</h3>
+                        <Link to={'/logowanie'} onClick={logOutFire} className="login__container-login" href="#">Wyloguj</Link>
                         <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
                     </div>
                     <div className={"main__nav"}>

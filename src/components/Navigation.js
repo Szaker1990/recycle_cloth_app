@@ -10,13 +10,12 @@ export const Navigation = () =>{
         <div className="col-6"></div>
         <div className={"col-6"}>
             <div className={"login__container"}>
-                {
-                    user &&(
-                        <p>{auth.currentUser.email}</p>
-                    )
+                {user &&(
+                        <p className={"login__container-login"} >{auth.currentUser.email}</p>)
                 }
                 <Link to={'/logowanie'} className={"login__container-login"} href="#">Zaloguj</Link>
                 <Link to={'/rejestracja'} className={"login__container-register"} href="#">Załóż konto</Link>
+
             </div>
             <div className={"main__nav"}>
                 <div className={"main__nav-list"}>
