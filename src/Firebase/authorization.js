@@ -6,3 +6,6 @@ export const registerFire = (email, password) => {
 export const loginFire = (email, password) => {
     return auth.signInWithEmailAndPassword(email, password)
 };
+export const logOutFire = () => {
+    return auth.signOut()
+}

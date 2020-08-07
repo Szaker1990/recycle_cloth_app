@@ -35,7 +35,7 @@ export const Login = () => {
             setPasswordError("");
         }
         try {
-            await loginFire(user.email, user.password);
+            await loginFire(user.email, user.password)
             history.push("/");
         } catch (err) {
             setEmailError(err.message);

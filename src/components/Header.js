@@ -1,23 +1,33 @@
-import React, {useState} from "react";
+import React, { useState} from "react";
 import {Link} from "react-router-dom";
 import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/shirt.svg";
+import {auth} from "../Firebase/firebase";
+import {logOutFire} from "../Firebase/authorization";
 
 export const Header = () => {
-    const[isLogged,setIsLogged] = useState(false)
-    const[userEmail,setUserEmail] = useState("")
-    const handleLogged = () => {
-        setIsLogged(true)
-    }
+    const[user] = useState(auth.currentUser)
     return (
         <>
             <div id="header" className={"nav__section row"}>
                 <div className={"col-6 login__image"}></div>
                 <div className={"col-6"}>
                     <div className={"login__container"}>
-                        <Link to={'/logowanie'} className="login__container-login" href="#">Zaloguj</Link>
-                        <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
-                        <Link to={'/wylogowanie'} className="login__container-register" href="#">Wyloguj</Link>
+                        {
+                            user &&(
+                                <>
+                                <p className={"login__container-register"}>{auth.currentUser.email}</p>
+                                    <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
+                                    <Link to={'/wylogowanie'} onClick={logOutFire} className="login__container-register" href="#">Wyloguj</Link>
+                               </>
+                            )}
+                        {!user &&(
+                                        <>
+                                            <Link to={'/logowanie'} className="login__container-login" href="#">Zaloguj</Link>
+                                            <Link to={'/rejestracja'} className="login__container-register" href="#">Załóż konto</Link>
+                                        </>
+                                        )}
+
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>
