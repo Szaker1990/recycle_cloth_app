@@ -7,6 +7,9 @@ import shirt from "../assets/shirt.png"
 import {Link} from "react-router-dom";
 
 export const Steps = () => {
+    const scrollToTop = () => {
+        window.scroll(0,800);
+    }
     return (
         <>
             <div className={"row"} id="steps">
@@ -48,7 +51,9 @@ export const Steps = () => {
             <div className={"row"}>
                 <div className="col-12">
                     <div className={"button__wrapper"}>
-                        <Link to={'/formularz'} className="button__wrapper-but" href="#"> Oddaj <br/>rzeczy</Link>
+                        <Link  to={'/formularz/#yellow'} onClick={scrollToTop} className="button__wrapper-but"
+                              href="#"> Oddaj <br/>rzeczy
+                        </Link>
                     </div>
                 </div>
             </div>

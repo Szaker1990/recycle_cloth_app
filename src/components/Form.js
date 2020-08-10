@@ -59,9 +59,7 @@ export const Form = () => {
         e.preventDefault()
         setCurrentStep(prev => prev - 1);
     }
-    if(!currentUser){
-        return <Login/>
-    }
+    if(!currentUser) return <Login/>
     return (
         <>
             <div className="row collect">
@@ -74,11 +72,11 @@ export const Form = () => {
                     </div>
                     <div className={"main__nav"}>
                         <div className={"main__nav-list"}>
-                            <HashLink className={"main__nav-item"} to={"/#header"}>Start</HashLink>
-                            <HashLink className={"main__nav-item"} to={"/#steps"}>O co chodzi?</HashLink>
-                            <HashLink className={"main__nav-item"} to={"/#about"}>O nas</HashLink>
-                            <HashLink className={"main__nav-item"} to={"/#help"}>Fundacja i Organizacje</HashLink>
-                            <HashLink className={"main__nav-item"} to={"/#contact"}>Kontakt</HashLink>
+                            <HashLink className={"main__nav-item"} smooth={true} duration={1000} to={"/#header"}>Start</HashLink>
+                            <HashLink className={"main__nav-item"} smooth={true} duration={1200} to={"/#steps"}>O co chodzi?</HashLink>
+                            <HashLink className={"main__nav-item"} smooth={true} duration={1400} to={"/#about"}>O nas</HashLink>
+                            <HashLink className={"main__nav-item"} smooth={true} duration={1600} to={"/#help"}>Fundacja i Organizacje</HashLink>
+                            <HashLink className={"main__nav-item"} smooth={true} duration={1800} to={"/#contact"}>Kontakt</HashLink>
                         </div>
                     </div>
                     <div className={"collect__step-box"}>

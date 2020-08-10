@@ -60,6 +60,8 @@
     border: 0.75px solid transparent;
     font-family: $font-base;
     font-weight: 300;
+    text-decoration: none;
+    color: black;
   }
   .active{
     border:0.75px solid $color-darkgrey;

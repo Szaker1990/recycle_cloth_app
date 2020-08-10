@@ -44,11 +44,11 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
                             <h2 className={"step4__box__header"}>Termin odbioru </h2>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Data</label>
-                                <input onChange={dataChange} value={date} name={"date"} className={"step4__form-input"} />
+                                <input type={"date"} onChange={dataChange} value={date} name={"date"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Godzina</label>
-                                <input onChange={dataChange} value={time} name={"time"} className={"step4__form-input"} />
+                                <input type={"time"} onChange={dataChange} value={time} name={"time"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Uwagi <br/> dla Kuriera</label>

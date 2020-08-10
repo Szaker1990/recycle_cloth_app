@@ -21,7 +21,7 @@ export const Step1 = ({currentStep,nextStep,dataChange,data}) => {
                 <div className={"col-4 bear__box"}>
                     <h3 className={"bear__box-step"}>Krok 1/4</h3>
                     <h2 className={"bear__box-header"}>Zaznacz co chcesz oddać:</h2>
-                    <form className={"bear__box-form"}>
+                    <form id={"bear__form"} className={"bear__box-form"}>
                         <div className={"bear__box-wrapper"}>
                             <input onClick={dataChange}  className={"radio__input"} type={"radio"} value={"ubrania, które nadaja sie do ponownego użycia"} name={"collection"}/>
                             <label className={"radio__label"}>ubrania, które nadaja sie do ponownego użycia</label>

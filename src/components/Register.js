@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import decoration from "../assets/shirt.svg";
 import {Navigation} from "./Navigation";
 import {registerFire} from "../Firebase/authorization";
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 export const Register = () =>{
     const [user,setUser] = useState({
@@ -76,7 +76,7 @@ export const Register = () =>{
                             </div>
                         </div>
                         <div className={"login__button-wrapper"}>
-                            <input className={"btn__register"} type={"submit"} value={"Zaloguj sie"}/>
+                            <Link to={'/logowanie'} className="btn__register" href="#">Zaloguj sie</Link>
                             <button onClick={handleLogin} className={"active"}>Załóż konto</button>
 
                         </div>

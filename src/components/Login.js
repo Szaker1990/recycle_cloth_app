@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import decoration from "../assets/shirt.svg";
 import {Navigation} from "./Navigation";
 import {loginFire} from "../Firebase/authorization";
-import {useHistory} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 export const Login = () => {
     const [user,setUser] = useState({
@@ -38,7 +38,7 @@ export const Login = () => {
             await loginFire(user.email, user.password)
             history.push("/");
         } catch (err) {
-            setEmailError(err.message);
+            // setEmailError(err.message);
         }
     }
     return (
@@ -62,7 +62,7 @@ export const Login = () => {
                             </div>
                         </div>
                         <div className={"login__button-wrapper"}>
-                            <button className={"btn__register"}>Załóż konto</button>
+                            <Link to={'/rejestracja'} className="btn__register" href="#">Załóż konto</Link>
                             <input onClick={handleLogin} className={"active"} type={"submit"} value={"Zaloguj sie"}/>
                         </div>
                     </form>
