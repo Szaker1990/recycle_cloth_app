@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
+import {Buttons} from "./Buttons";
 
 export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange,cityTo}) => {
     const[disabled,setDisabled] = useState(true);
@@ -29,7 +30,7 @@ export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange,city
             "Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy."}/>
             <div className={"row bear__container"}>
                 <div className={"step3__container"}>
-                    <h4 className={"step3__container-counter"}>krok 3/4</h4>
+                    <h4 className={"step3__container-counter"}>Krok 3/4</h4>
                     <form className={"step3__form"}>
                         <div className={"step3__select-container"}>
                             <h3 className={"step3__select-header"}>Lokalizacja:</h3>
@@ -53,10 +54,7 @@ export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange,city
                             </label>
                             <input onChange={orgChange} className={"step3__input-area"} type={"text"} name={"organization"}/>
                         </div>
-                        <div className={"step3__buttons"}>
-                            <button onClick={prevStep} className={"step3__btn"}>Wstecz</button>
-                            <button onClick={nextStep} disabled={disabled} className={"step3__btn"}>Dalej</button>
-                        </div>
+                        <Buttons prevStep={prevStep} nextStep={nextStep} disabled={disabled}/>
                     </form>
                 </div>
             </div>

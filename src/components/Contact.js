@@ -85,7 +85,6 @@ export const Contact = () => {
              }
             reset();
         }
-
         const reset = () => {
             setUserName("");
             setUserEmail("");

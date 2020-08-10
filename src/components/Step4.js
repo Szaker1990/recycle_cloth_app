@@ -1,8 +1,9 @@
 import React from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
+import {Buttons} from "./Buttons";
 
-export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street}) => {
+export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,phone,postCode,date,time,notice}) => {
 
     const handleForm = () => {
         if(street.length < 2){
@@ -28,39 +29,36 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street}) => {
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Miasto</label>
-                                <input onChange={dataChange} name={"city"} className={"step4__form-input"}/>
+                                <input onChange={dataChange} value={city} name={"city"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Kod<br/>pocztowy</label>
-                                <input onChange={dataChange}  name={"postCode"} className={"step4__form-input"}/>
+                                <input onChange={dataChange} value={postCode} name={"postCode"} className={"step4__form-input"}/>
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Numer<br/>telefonu</label>
-                                <input onChange={dataChange} name={"phoneNumber"} className={"step4__form-input"}/>
+                                <input onChange={dataChange} value={phone} name={"phoneNumber"} className={"step4__form-input"}/>
                             </div>
                         </div>
                         <div className={"step4__form-wrapper"}>
                             <h2 className={"step4__box__header"}>Termin odbioru </h2>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Data</label>
-                                <input onChange={dataChange} name={"date"} className={"step4__form-input"} />
+                                <input onChange={dataChange} value={date} name={"date"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Godzina</label>
-                                <input onChange={dataChange} name={"time"} className={"step4__form-input"} />
+                                <input onChange={dataChange} value={time} name={"time"} className={"step4__form-input"} />
                             </div>
                             <div className={"step4__form-box"}>
                                 <label className={"step4__form-label"}>Uwagi <br/> dla Kuriera</label>
                                 <textarea className={"step4__form-area"} onChange={dataChange} cols={4}
-                                          name={"notice"} rows={4}>
+                                      value={notice} name={"notice"} rows={4}>
                                 </textarea>
                             </div>
                         </div>
                     </form>
-                    <div className={"step4__buttons-box"}>
-                        <button className={"step4__btn"} onClick={prevStep}>Wstecz</button>
-                        <button className={"step4__btn"} onClick={nextStep}>Dalej</button>
-                    </div>
+                    <Buttons prevStep={prevStep} nextStep={nextStep}/>
                 </div>
             </div>
             <Contact/>

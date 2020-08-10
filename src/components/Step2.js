@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Select} from "./Select";
+import {Buttons} from "./Buttons";
 
 export const Step2 = ({currentStep, nextStep, prevStep,dataChange,head}) => {
     const[disabled,setDisabled] = useState(true);
@@ -28,10 +29,7 @@ export const Step2 = ({currentStep, nextStep, prevStep,dataChange,head}) => {
                             <h4 className={"step2__form-header"}>Liczba 60l worków</h4>
                             <Select dataChange={dataChange} ident={"bags"}  title={"— wybierz —"} items={["1","2","3","4","5"]}/>
                         </div>
-                        <div className={"step2__buttons-container"}>
-                            <button onClick={prevStep} className={"step2__btn"}>Wstecz</button>
-                            <button onClick={nextStep} disabled={disabled} className={"step2__btn"}>Dalej</button>
-                        </div>
+                        <Buttons nextStep={nextStep} prevStep={prevStep} disabled={disabled}/>
                     </form>
                 </div>
             </div>

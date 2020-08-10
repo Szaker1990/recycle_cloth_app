@@ -10,6 +10,7 @@
     justify-content: flex-start;
     flex-direction: column;
     margin-left: 8%;
+    position: relative;
 
     .bear__box-step{
       font-size: 24px;
@@ -53,6 +54,8 @@
       .bear__box-buttons{
         margin-top: 120px;
         margin-left: 3%;
+        position: absolute;
+        top: 65%;
 
         .bear__box-btn{
           font-size: 24px;
@@ -61,7 +64,7 @@
           background: transparent;
           font-family: $font-base;
           cursor: pointer;
-          height: 80px;
+          height: 60px;
           width: 180px;
         }
       }

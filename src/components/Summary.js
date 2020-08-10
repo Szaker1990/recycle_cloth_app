@@ -3,6 +3,7 @@ import {Contact} from "./Contact";
 import Icon from "../assets/shirt.png";
 import refresh from "../assets/refresh.png";
 import {YellowLabel} from "./YellowLabel";
+import {Buttons} from "./Buttons";
 
 export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,date,time,notice ,postCode,phone,from,howMuch}) => {
     if (currentStep !== 5) {
@@ -61,10 +62,7 @@ export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,dat
                             </div>
                         </div>
                     </div>
-                    <div className={"summary__data-buttons"}>
-                        <button onClick={prevStep} className={"summary__data-btn"}>Wstecz</button>
-                        <button onClick={nextStep} className={"summary__data-btn"}>Dalej</button>
-                    </div>
+                    <Buttons prevStep={prevStep} nextStep={nextStep}/>
                 </div>
             </div>
             <Contact/>

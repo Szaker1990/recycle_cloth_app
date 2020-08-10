@@ -10,7 +10,7 @@ import {Summary} from "./Summary";
 import {Greetings} from "./Greetings";
 import {auth} from "../Firebase/firebase";
 import {logOutFire} from "../Firebase/authorization";
-import {Register} from "./Register";
+import {Login} from "./Login";
 
 export const Form = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -30,7 +30,7 @@ export const Form = () => {
         street: "",
         city: "",
         postCode: "",
-        phoneNumber: 0,
+        phoneNumber: "",
         date: "",
         time: "",
         notice: ""
@@ -60,7 +60,7 @@ export const Form = () => {
         setCurrentStep(prev => prev - 1);
     }
     if(!currentUser){
-        return <Register/>
+        return <Login/>
     }
     return (
         <>
@@ -133,7 +133,14 @@ export const Form = () => {
                    nextStep={nextStep}
                    prevStep={prevStep}
                    dataChange={handleChangeGiveAwayData}
-                   street={giveAway.street}/>
+                   street={giveAway.street}
+                   city={giveAway.city}
+                   phone={giveAway.phoneNumber}
+                   postCode={giveAway.postCode}
+                   date={giveAway.date}
+                   time={giveAway.time}
+                   notice={giveAway.notice}
+                   />
             <Summary street={giveAway.street}
                      items={giveAway.collection}
                      currentStep={currentStep}
