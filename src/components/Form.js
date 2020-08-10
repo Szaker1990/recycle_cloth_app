@@ -10,9 +10,11 @@ import {Summary} from "./Summary";
 import {Greetings} from "./Greetings";
 import {auth} from "../Firebase/firebase";
 import {logOutFire} from "../Firebase/authorization";
+import {Register} from "./Register";
 
 export const Form = () => {
     const [currentStep, setCurrentStep] = useState(1);
+    const [currentUser] = useState(auth.currentUser)
     const [giveAway, setGiveaway] = useState({
         collection: "",
         bags: "",
@@ -56,6 +58,9 @@ export const Form = () => {
     const prevStep = (e) => {
         e.preventDefault()
         setCurrentStep(prev => prev - 1);
+    }
+    if(!currentUser){
+        return <Register/>
     }
     return (
         <>

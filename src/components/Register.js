@@ -42,13 +42,14 @@ export const Register = () =>{
         }
         else {
             setPassword2Error("");
+            try {
+                await registerFire(user.email, user.password);
+                history.push("/")
+            } catch (err) {
+                // setEmailError(err.message);
+            }
         }
-        try {
-            await registerFire(user.email, user.password);
-            history.push("/")
-        } catch (err) {
-            setEmailError(err.message);
-        }
+
     }
     return(
         <>
