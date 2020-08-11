@@ -58,7 +58,7 @@ export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,dat
                             </div>
                             <div className={"summary__data-wrapper"}>
                                 <p className={"summary__data-text"}>Uwagi<br/> dla Kuriera</p>
-                                <p className={"summary__data-text"}>{notice}</p>
+                                <p className={"textarea__box"}>{notice}</p>
                             </div>
                         </div>
                     </div>
