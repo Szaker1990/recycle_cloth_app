@@ -13,7 +13,7 @@ import {logOutFire} from "../Firebase/authorization";
 import {Login} from "./Login";
 
 export const Form = () => {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(4);
     const [currentUser] = useState(auth.currentUser)
     const [giveAway, setGiveaway] = useState({
         collection: "",
@@ -112,22 +112,29 @@ export const Form = () => {
                     </div>
                 </div>
             </div>
-            <Step1 currentStep={currentStep}
+            <Step1
+                currentStep={currentStep}
                    nextStep={nextStep}
                    dataChange={handleChangeGiveAwayData}
-                   data={giveAway.collection}/>
-            <Step2 currentStep={currentStep}
+                   data={giveAway.collection}
+            />
+            <Step2
+                   currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
                    dataChange={handleChangeGiveAwayDataById}
-                   head={giveAway.bags}/>
-            <Step3 dataChange={handleChangeGiveAwayDataById}
+                   head={giveAway.bags}
+            />
+            <Step3
+                   dataChange={handleChangeGiveAwayDataById}
                    currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
                    orgChange={handleChangeGiveAwayData}
-                   cityTo={giveAway.cityTo}/>
-            <Step4 currentStep={currentStep}
+                   cityTo={giveAway.cityTo}
+            />
+            <Step4
+                   currentStep={currentStep}
                    nextStep={nextStep}
                    prevStep={prevStep}
                    dataChange={handleChangeGiveAwayData}
@@ -138,8 +145,9 @@ export const Form = () => {
                    date={giveAway.date}
                    time={giveAway.time}
                    notice={giveAway.notice}
-                   />
-            <Summary street={giveAway.street}
+            />
+            <Summary
+                     street={giveAway.street}
                      items={giveAway.collection}
                      currentStep={currentStep}
                      nextStep={nextStep}
@@ -152,7 +160,8 @@ export const Form = () => {
                      time={giveAway.time}
                      notice={giveAway.notice}
                      howMuch={giveAway.bags}
-                     from={giveAway.cityTo}/>
+                     from={giveAway.cityTo}
+            />
             <Greetings currentStep={currentStep}/>
         </>
     )

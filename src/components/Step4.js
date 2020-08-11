@@ -1,13 +1,29 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Buttons} from "./Buttons";
 
 export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,phone,postCode,date,time,notice}) => {
+    const[listOfErrors,setListOfErrors] = useState([])
+    useEffect(() =>{
+        handleErrors()
+    },[city,street])
+    const handleErrors = () => {
+        const errors = []
+        if(street.length < 2) {errors.push("nazwa ulicy jest za krotka")}
+        if(city.length < 2) {errors.push("nazwa miasta jest za krotka")}
+        if(postCode.length < 5 || postCode.length > 6 || !postCode.match("^[0-9]{2}-[0-9]{3}$")){ errors.push("Zly format kodu pocztowego")}
+        if(!phone.match("^[0-9]{9}")){errors.push("zly format numeru telefonu")}
 
-    const handleForm = () => {
-        if(street.length < 2){
-            return false
+        setListOfErrors(errors)
+
+
+    }
+    const validate = (e) => {
+        handleErrors()
+        if(listOfErrors.length > 0 )return false
+        else {
+            nextStep(e)
         }
     }
     if (currentStep !== 4) {
@@ -20,7 +36,7 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
                 <div className={"step4__container"}>
                     <h4 className={"step4__counter"}>Krok 4/4</h4>
                     <h2 className={"step4__header"}>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
-                    <form onSubmit={handleForm} className={"step4__form"}>
+                    <form onSubmit={validate} className={"step4__form"}>
                         <div className={"step4__form-wrapper"}>
                             <h2 className={"step4__box__header"}>Adres odbioru</h2>
                             <div className={"step4__form-box"}>
@@ -58,7 +74,10 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
                             </div>
                         </div>
                     </form>
-                    <Buttons prevStep={prevStep} nextStep={nextStep}/>
+                    <ul>
+                        {listOfErrors.map((element,index) => <li key={index}>{element}</li>)}
+                    </ul>
+                    <Buttons prevStep={prevStep} nextStep={validate}/>
                 </div>
             </div>
             <Contact/>
