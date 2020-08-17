@@ -60,3 +60,33 @@
     align-items: center;
   }
 }
+@media (max-width: 1450px) {
+  #step__wrapper{
+    width: 100%;
+  }
+  .steps__box-card{
+    padding: 10px;
+    width: 200px;
+  }
+}
+@media (max-width: 1000px) {
+  .steps__box{
+    height: 100%;
+    flex-direction: column;
+    .steps__box-card{
+      margin: 10px 0;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .header__box{
+    font-size: 20px;
+    width: 50%;
+  }
+  .button__wrapper{
+    .button__wrapper-but{
+      height: 80px;
+      font-size: 20px;
+    }
+  }
+}

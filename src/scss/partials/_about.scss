@@ -34,4 +34,26 @@
 .section__about{
   height: 80vh;
 }
+@media (max-width: 1300px) {
+  .about__picture{
+    display: none;
+  }
+  #about__wrapper{
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .about__container{
 
+    .about__header{
+      font-size: 28px;
+    }
+    .about__text{
+      font-size: 20px;
+    }
+    .about__signature{
+      height: 200px;
+      width: 150px;
+    }
+  }
+}
