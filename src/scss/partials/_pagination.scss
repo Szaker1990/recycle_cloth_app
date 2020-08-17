@@ -26,3 +26,13 @@
     }
   }
 }
+@media (max-width:800px ) {
+  .pagination__wrapper{
+    flex-direction: column;
+    height: 200px;
+    .pagination__item{
+      margin: 0;
+    }
+  }
+
+}

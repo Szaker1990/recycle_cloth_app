@@ -93,9 +93,9 @@ export const Contact = () => {
     return (
         <>
             <div id="contact" className={"contact__container"}>
-                <div className={"row"}>
-                    <div className="col-7"></div>
-                    <div className={"col-5 contact__container-form"}>
+                <div className={"row contact__content"}>
+                    <div className={"col-7"} id={"contact__image"}></div>
+                    <div className={"col-5 contact__container-form"} id={"contact__handler"}>
                         <h2 className={"form__header"}>Skontaktuj sie z nami</h2>
                         <img className={"form__img"} src={decoration} alt={"decoration"}/>
                         <p className={"succes__message"}>{responseMessage}</p>
@@ -119,7 +119,7 @@ export const Contact = () => {
                                 <textarea value={userMessage} className={(messageError === "" ? "area__input" : "area__input-active")} onChange={handleUserMessage} rows={4} cols={4}
                                           placeholder={"Lorem ipsum dolor sit amet," +
                                           " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua" +
-                                          ". Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " +
+                                          ". ullamco laboris nisi ut aliquip ex ea commodo " +
                                           "consequat."}>
                                 </textarea>
                                 <p className={"error__message"}>{messageError}</p>
