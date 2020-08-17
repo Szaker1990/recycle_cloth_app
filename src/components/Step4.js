@@ -18,7 +18,6 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
         if(time === ""){errors.push("Musisz wybrać czas odbioru")}
         if(date === ""){errors.push("Musisz wybrać date odbioru")}
         if(notice.length > 100){errors.push("Podana wiadomość jest za dluga")}
-
         setListOfErrors(errors);
         if(errors.length > 0) return false
         else nextStep(e)

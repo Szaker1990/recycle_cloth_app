@@ -36,5 +36,4 @@ export const Step2 = ({currentStep, nextStep, prevStep,dataChange,head}) => {
             <Contact/>
         </>
     )
-
 }

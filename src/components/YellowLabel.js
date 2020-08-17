@@ -9,5 +9,4 @@ export const YellowLabel = ({text}) => {
             </div>
         </div>
     )
-
 }

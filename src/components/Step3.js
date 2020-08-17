@@ -12,7 +12,6 @@ export const Step3 = ({currentStep, nextStep, prevStep,orgChange,dataChange,city
     useEffect(() => {
         enableButton()
     })
-
     const setBg = (e) => {
         if (e.target.className === "step3__recipient-item") {
             e.target.className = "step3__recipient-itemYellow"

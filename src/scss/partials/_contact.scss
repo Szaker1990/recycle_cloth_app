@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     height: 60px;
+
     .form__wrapper-label{
       font-size: 16px;
     }
@@ -62,6 +63,7 @@
 .form__wrapper-area{
   display: flex;
   flex-direction: column;
+
   .area__label{
     font-size: 18px;
   }
@@ -85,6 +87,7 @@
 .form__button-wrapper{
   display: flex;
   justify-content: flex-end;
+
   .button__submit{
     background-color: transparent;
     font-size: 18px;
@@ -100,6 +103,7 @@
 .footer{
   margin-top: 2%;
   display: flex;
+
   .footer__header{
     display: flex;
     justify-content: center;
