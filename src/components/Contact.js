@@ -16,7 +16,7 @@ export const Contact = () => {
         message: userMessage
     });
     const ApiAdress = 'https://fer-api.coderslab.pl/v1/portfolio/contact';
-    const addNewUser = () =>{
+    const addNewUser = () => {
         let newUser = {
             name: userName.trim(),
             email: userEmail,
@@ -24,7 +24,7 @@ export const Contact = () => {
         }
         setUser(newUser);
     }
-    useEffect(() =>{
+    useEffect(() => {
         addNewUser()
     },[userName,userEmail,userMessage])
     const handleSubmitData = () => {

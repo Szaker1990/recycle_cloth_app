@@ -11,8 +11,8 @@ export const Header = () => {
         <>
             <div id="header" className={"nav__section row"}>
                 <div className={"col-6 login__image"}></div>
-                <div className={"col-6"}>
-                    <div className={"login__container"}>
+                <div id={"body__container"} className={"col-6"}>
+                    <div className={"login__container "}>
                         {
                             user &&(
                                 <>
