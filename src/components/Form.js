@@ -64,7 +64,7 @@ export const Form = () => {
         <>
             <div className="row collect">
                 <div className="col-6 sweat__img"></div>
-                <div className={"col-6"}>
+                <div id={"form__container"} className={"col-6"}>
                     <div className={"login__container"}>
                         <h3 className={"user__name"}>Witaj {auth.currentUser.email}</h3>
                         <Link to={'/logowanie'} onClick={logOutFire} className="login__container-login" href="#">Wyloguj</Link>

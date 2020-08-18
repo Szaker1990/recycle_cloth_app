@@ -59,7 +59,6 @@ export const Contact = () => {
     const sendForm = (e) => {
         e.preventDefault();
         handleSubmitData();
-        console.log(userMessage.length);
         if (userEmail.length > 1 && userName.length >1 && userMessage.length > 120) {
             fetch(ApiAdress,{
                 method: "POST",

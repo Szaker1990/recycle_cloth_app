@@ -4,6 +4,7 @@ import {Link as ScrollLink} from "react-scroll";
 import decoration from "../assets/shirt.svg";
 import {auth} from "../Firebase/firebase";
 import {logOutFire} from "../Firebase/authorization";
+import {Burger} from "./Burger";
 
 export const Header = () => {
     const[user] = useState(auth.currentUser)

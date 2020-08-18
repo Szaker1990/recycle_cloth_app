@@ -15,7 +15,6 @@ export const Navigation = () =>{
                 }
                 <Link to={'/logowanie'} className={"login__container-login"} href="#">Zaloguj</Link>
                 <Link to={'/rejestracja'} className={"login__container-register"} href="#">Załóż konto</Link>
-
             </div>
             <div className={"main__nav"}>
                 <div className={"main__nav-list"}>

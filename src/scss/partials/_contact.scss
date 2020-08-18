@@ -140,6 +140,11 @@
     }
   }
 }
+@media (max-width: 1000px) {
+  .contact__container{
+    background: transparent;
+  }
+}
 @media (max-width: 600px) {
   .form__wrapper{
     flex-direction: column;
