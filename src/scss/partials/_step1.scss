@@ -76,3 +76,48 @@
   align-items: center;
   margin: 2% 0;
 }
+
+@media (max-width: 1100px) {
+  .bear__container {
+    background: $color-white;
+    .col-4{
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .bear__container {
+    .bear__box {
+      .bear__box-header {
+        font-size: 26px;
+      }
+      .bear__box-form{
+        flex-flow: column nowrap;
+        .bear__box-wrapper{
+          height: 70px;
+          .radio__input{
+          }
+          .radio__label{
+            font-size: 18px;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .bear__container{
+    .bear__box{
+      .bear__box-form{
+        .bear__box-buttons{
+          .bear__box-btn{
+            width: 300px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

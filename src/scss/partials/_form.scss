@@ -105,6 +105,7 @@
 }
 @media (max-width: 1001px) {
   .collect__step-box{
+    margin-bottom: 300px;
     .step__box-header{
       margin-top: 10px;
       font-size: 28px;
@@ -116,26 +117,44 @@
       .steps__container-box{
         height: 130px;
         width: 130px;
-
       }
     }
   }
   .collect{
     height: 70vh;
   }
+  .yellow__box{
+    justify-content: center;
+    height: 100%;
+    .yellow__box-wrapper{
+      margin: 20px 0;
+      align-items: center;
+      .yellow__box-header{
+        font-size: 28px;
+      }
+      .yellow__box-text{
+        font-size: 16px;
+      }
+    }
+  }
 }
 @media(max-width: 700px)  {
   .collect__step-box{
+    .step__box-text{
+      font-size: 20px;
+    }
     .steps__container{
       flex-direction: column;
       .steps__container-box{
         margin: 10px 0;
+        &:nth-of-type(4){
+          margin-bottom: 300px;
+        }
       }
     }
   }
   .collect{
-    height: 100vh;
+    height: 120vh;
   }
-  
 }
 
