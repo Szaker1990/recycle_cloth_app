@@ -12,7 +12,7 @@ export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,dat
     return (
         <>
             <YellowLabel text={"Uwaga! sprawdź czy dane sie zgadzają!"}/>
-            <div className={"row bear__container"}>
+            <div className={"row bear__container"} id={"summary"}>
                 <div className="col-6 summary">
                     <div className={"summary__container-header"}>
                         <h2 className={"summary__header"}>Podsumowanie Twojej darowizny</h2>

@@ -28,7 +28,7 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
     return (
         <>
             <YellowLabel text={"Podaj adres oraz termin odbioru rzeczy."}/>
-            <div className="row bear__container">
+            <div className={"row bear__container"} id={"step4"}>
                 <div className={"step4__container"}>
                     <h4 className={"step4__counter"}>Krok 4/4</h4>
                     <h2 className={"step4__header"}>Podaj adres oraz termin odbioru rzecz przez kuriera</h2>
@@ -70,7 +70,7 @@ export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,ph
                             </div>
                         </div>
                     </form>
-                    <ul>
+                    <ul className={"form__error-ul"}>
                         {listOfErrors.map((element,index) => <li className={"form__error-li"} key={index}>{element}</li>)}
                     </ul>
                     <Buttons prevStep={prevStep} nextStep={handleErrors}/>

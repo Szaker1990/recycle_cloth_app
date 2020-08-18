@@ -13,7 +13,7 @@ import {logOutFire} from "../Firebase/authorization";
 import {Login} from "./Login";
 
 export const Form = () => {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(6);
     const [currentUser] = useState(auth.currentUser)
     const [giveAway, setGiveaway] = useState({
         collection: "",

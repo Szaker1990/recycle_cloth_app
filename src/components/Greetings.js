@@ -9,7 +9,7 @@ export const Greetings = ({currentStep}) => {
     return (
         <>
             <div className={"row bear__container"}>
-                <div className="col-6 greeting__wrapper">
+                <div className={"col-6 greeting__wrapper"} id={"greeting"}>
                     <h2 className={"greeting__header"}>Dziękujemy za przesłanie formularza <br/>Na maila prześlemy wszelkie informacje o odbiorze.</h2>
                     <img alt={"deco"} src={decoration}/>
                 </div>

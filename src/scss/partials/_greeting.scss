@@ -13,3 +13,18 @@
     margin-bottom: 3%;
   }
 }
+
+@media (max-width: 1100px) {
+  #greeting{
+    width: 100%;
+  }
+
+}
+@media (max-width: 768px) {
+  .greeting__wrapper{
+    .greeting__header{
+      font-size: 25px;
+      width: 70%
+    }
+  }
+}
