@@ -11,9 +11,10 @@ import {Greetings} from "./Greetings";
 import {auth} from "../Firebase/firebase";
 import {logOutFire} from "../Firebase/authorization";
 import {Login} from "./Login";
+import {Burger} from "./Burger";
 
 export const Form = () => {
-    const [currentStep, setCurrentStep] = useState(6);
+    const [currentStep, setCurrentStep] = useState(1);
     const [currentUser] = useState(auth.currentUser)
     const [giveAway, setGiveaway] = useState({
         collection: "",
@@ -63,6 +64,9 @@ export const Form = () => {
     return (
         <>
             <div className="row collect">
+                <div className={"burger__test"}>
+                    <Burger/>
+                </div>
                 <div className="col-6 sweat__img"></div>
                 <div id={"form__container"} className={"col-6"}>
                     <div className={"login__container"}>

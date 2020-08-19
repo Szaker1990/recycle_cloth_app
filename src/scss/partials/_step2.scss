@@ -1,4 +1,4 @@
-.step2__container{
+.step2__container {
   font-family: $font-base;
   margin-top: 3%;
   display: flex;
@@ -7,29 +7,32 @@
   margin-left: 8%;
   position: relative;
 
-  .step2__container-counter{
+  .step2__container-counter {
     font-size: 24px;
     color: $color-darkgrey;
     font-weight: 300;
   }
-  .step2__container-header{
+
+  .step2__container-header {
     font-size: 36px;
     color: black;
     font-weight: 600;
     margin: 5% 0;
 
   }
-  .step2__container-form{
+
+  .step2__container-form {
     background: transparent;
 
-    .step2__form-header{
+    .step2__form-header {
       font-size: 24px;
       font-weight: 300;
       color: black;
     }
   }
 }
-.step2__form-wrapper{
+
+.step2__form-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

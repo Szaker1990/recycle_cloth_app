@@ -1,39 +1,42 @@
-.login{
+.login {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 7%;
 
-  .login__header{
+  .login__header {
     font-size: 40px;
     text-align: center;
     margin-bottom: 1%;
   }
-  .login__form{
 
-    .login__input-wrapper{
+  .login__form {
+
+    .login__input-wrapper {
       margin-top: 40px;
       height: 280px;
       width: 480px;
-      background:#F0F1F1;
+      background: #F0F1F1;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
 
-      .login__form-label{
+      .login__form-label {
         font-size: 16px;
         margin: 3% 0;
       }
-      .login__form-email{
-        background:#F0F1F1;
+
+      .login__form-email {
+        background: #F0F1F1;
         border: none;
         border-bottom: 0.75px solid $color-darkgrey;
         font-size: 16px;
       }
-      .login__form-password{
-        background:#F0F1F1;
+
+      .login__form-password {
+        background: #F0F1F1;
         border: none;
         border-bottom: 0.75px solid $color-darkgrey;
         font-size: 16px;
@@ -41,19 +44,20 @@
     }
   }
 }
-.wrapper__handler{
+
+.wrapper__handler {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.login__button-wrapper{
+.login__button-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 10% -60px;
   align-items: center;
 
-  .btn__register{
+  .btn__register {
     font-size: 18px;
     background: white;
     cursor: pointer;
@@ -63,13 +67,51 @@
     text-decoration: none;
     color: black;
   }
-  .active{
-    border:0.75px solid $color-darkgrey;
+
+  .active {
+    border: 0.75px solid $color-darkgrey;
     background: white;
     cursor: pointer;
     font-size: 18px;
     font-family: $font-base;
     padding: 12px 22px;
     font-weight: 300;
+  }
+}
+@media (max-width: 1000px){
+  .login{
+    margin-top: 13%;
+  }
+}
+@media (max-width: 700px) {
+  .login {
+    .login__header {
+      font-size: 30px;
+    }
+  }
+  .login__button-wrapper {
+    margin: 10% 0;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .login {
+    height: 70vh;
+
+    .login__form {
+      .login__input-wrapper {
+        width: 400px;
+      }
+    }
+  }
+  .login__button-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .active {
+      margin-bottom: 30px;
+      width: 100%;
+    }
   }
 }

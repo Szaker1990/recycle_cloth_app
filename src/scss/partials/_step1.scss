@@ -1,10 +1,10 @@
-.bear__container{
+.bear__container {
   height: 80vh;
   background-image: url("./../../assets/bear.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  .bear__box{
+  .bear__box {
     margin-top: 3%;
     display: flex;
     justify-content: flex-start;
@@ -12,33 +12,36 @@
     margin-left: 8%;
     position: relative;
 
-    .bear__box-step{
+    .bear__box-step {
       font-size: 24px;
       color: $color-darkgrey;
       font-weight: 300;
       margin-bottom: 3%;
     }
-    .bear__box-header{
+
+    .bear__box-header {
       font-size: 36px;
       font-weight: 600;
       color: black;
       margin-bottom: 4%;
     }
-    .bear__box-form{
+
+    .bear__box-form {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
-      .bear__box-wrapper{
+
+      .bear__box-wrapper {
         margin: 3% 0;
         display: flex;
         align-items: center;
 
-        .radio__label{
+        .radio__label {
           font-size: 24px;
           font-weight: 300;
         }
-        .radio__input{
+
+        .radio__input {
           height: 40px;
           width: 40px;
           margin-right: 2%;
@@ -46,18 +49,20 @@
           appearance: none;
           background: transparent;
           border: 0.75px solid $color-darkgrey;
-          &:checked{
+
+          &:checked {
             background-color: $color-yellow;
           }
         }
       }
-      .bear__box-buttons{
+
+      .bear__box-buttons {
         margin-top: 120px;
         margin-left: 3%;
         position: absolute;
         top: 65%;
 
-        .bear__box-btn{
+        .bear__box-btn {
           font-size: 24px;
           font-weight: 300;
           border: 0.75px solid $color-darkgrey;
@@ -71,7 +76,8 @@
     }
   }
 }
-.checkbox__wrapper{
+
+.checkbox__wrapper {
   display: flex;
   align-items: center;
   margin: 2% 0;
@@ -80,7 +86,8 @@
 @media (max-width: 1100px) {
   .bear__container {
     background: $color-white;
-    .col-4{
+
+    .col-4 {
       width: 100%;
     }
   }
@@ -89,17 +96,22 @@
 @media (max-width: 650px) {
   .bear__container {
     height: 800px;
+
     .bear__box {
       .bear__box-header {
         font-size: 26px;
       }
-      .bear__box-form{
+
+      .bear__box-form {
         flex-flow: column nowrap;
-        .bear__box-wrapper{
+
+        .bear__box-wrapper {
           height: 70px;
-          .radio__input{
+
+          .radio__input {
           }
-          .radio__label{
+
+          .radio__label {
             font-size: 18px;
             width: 70%;
           }
@@ -108,12 +120,13 @@
     }
   }
 }
+
 @media (max-width: 600px) {
-  .bear__container{
-    .bear__box{
-      .bear__box-form{
-        .bear__box-buttons{
-          .bear__box-btn{
+  .bear__container {
+    .bear__box {
+      .bear__box-form {
+        .bear__box-buttons {
+          .bear__box-btn {
             width: 300px;
             height: 50px;
           }

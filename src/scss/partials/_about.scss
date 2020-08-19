@@ -1,16 +1,17 @@
-.about__container{
+.about__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #F0F1F1;
 
-  .about__header{
+  .about__header {
     font-size: 38px;
     color: $color-darkgrey;
     margin-top: 30px;
   }
-  .about__text{
+
+  .about__text {
     font-size: 30px;
     text-align: center;
     width: 80%;
@@ -18,40 +19,48 @@
     margin-bottom: 20px;
     line-height: 1.5em;
   }
-  .about__decoration{
+
+  .about__decoration {
     margin: 15px 0 30px 0;
   }
-  .about__signature{
+
+  .about__signature {
     align-self: flex-end;
     margin-right: 10%;
   }
 }
-.about__picture{
+
+.about__picture {
   background-image: url("./../../assets/People.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.section__about{
+
+.section__about {
   height: 80vh;
 }
+
 @media (max-width: 1300px) {
-  .about__picture{
+  .about__picture {
     display: none;
   }
-  #about__wrapper{
+  #about__wrapper {
     width: 100%;
   }
 }
-@media (max-width: 900px) {
-  .about__container{
 
-    .about__header{
+@media (max-width: 900px) {
+  .about__container {
+
+    .about__header {
       font-size: 28px;
     }
-    .about__text{
+
+    .about__text {
       font-size: 20px;
     }
-    .about__signature{
+
+    .about__signature {
       height: 200px;
       width: 150px;
     }

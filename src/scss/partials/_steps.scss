@@ -1,17 +1,19 @@
-.header__box{
+.header__box {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 38px;
   margin: 50px 0;
 }
-.img__box{
+
+.img__box {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
-.steps__box{
+
+.steps__box {
   height: 350px;
   background-color: #F0F1F1;
   display: flex;
@@ -19,7 +21,7 @@
   align-items: center;
 }
 
-.steps__box-card{
+.steps__box-card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,24 +29,25 @@
   flex-direction: column;
   padding: 30px;
 
-  .box__card-header{
+  .box__card-header {
     font-size: 18px;
     margin: 10px 0;
     padding: 10px 0;
   }
-  .box__card-text{
+
+  .box__card-text {
     font-size: 16px;
     border-top: 0.75px solid $color-darkgrey;
     padding-top: 10px;
   }
 }
 
-.button__wrapper{
+.button__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .button__wrapper-but{
+  .button__wrapper-but {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 36px;
@@ -61,31 +64,35 @@
     align-items: center;
   }
 }
+
 @media (max-width: 1450px) {
-  #step__wrapper{
+  #step__wrapper {
     width: 100%;
   }
-  .steps__box-card{
+  .steps__box-card {
     padding: 10px;
     width: 200px;
   }
 }
+
 @media (max-width: 1000px) {
-  .steps__box{
+  .steps__box {
     height: 100%;
     flex-direction: column;
-    .steps__box-card{
+
+    .steps__box-card {
       margin: 10px 0;
     }
   }
 }
+
 @media (max-width: 600px) {
-  .header__box{
+  .header__box {
     font-size: 20px;
     width: 50%;
   }
-  .button__wrapper{
-    .button__wrapper-but{
+  .button__wrapper {
+    .button__wrapper-but {
       height: 80px;
       font-size: 20px;
     }

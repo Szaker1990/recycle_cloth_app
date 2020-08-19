@@ -2,11 +2,15 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
 import {auth} from "../Firebase/firebase";
+import {Burger} from "./Burger";
 
 export const Navigation = () =>{
     const[user] = useState(auth.currentUser);
     return(
     <div className="row">
+        <div className={"burger__test"}>
+            <Burger/>
+        </div>
         <div className="col-6"></div>
         <div className={"col-6"}>
             <div className={"login__container"}>

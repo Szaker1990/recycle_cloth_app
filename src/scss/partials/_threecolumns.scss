@@ -1,4 +1,4 @@
-.cards__wrapper{
+.cards__wrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -7,48 +7,57 @@
   height: 400px;
   background-size: cover;
 
-  .card__container{
+  .card__container {
     text-align: center;
 
-    .card__container-header{
+    .card__container-header {
       font-size: 90px;
       font-weight: 300;
     }
-    .card__container-title{
+
+    .card__container-title {
       font-size: 18px;
       text-transform: uppercase;
       margin: 20px 0;
     }
-    .card__container-text{
+
+    .card__container-text {
       font-size: 16px;
       line-height: 1.4;
     }
   }
 }
+
 @media (max-width: 1200px) {
-  .cards__wrapper{
+  .cards__wrapper {
     height: 300px;
-    .card__container{
-      .card__container-header{
+
+    .card__container {
+      .card__container-header {
         font-size: 60px;
       }
-      .card__container-title{
+
+      .card__container-title {
         font-size: 14px;
       }
-      .card__container-text{
+
+      .card__container-text {
         font-size: 12px;
       }
     }
   }
 }
+
 @media (max-width: 850px) {
-  .cards__wrapper{
+  .cards__wrapper {
     flex-direction: column;
     height: 100%;
-    .card__container{
+
+    .card__container {
       margin: 20px 0;
       width: 40%;
-      .card__container-header{
+
+      .card__container-header {
         font-size: 40px;
       }
     }

@@ -12,24 +12,28 @@
     font-size: 24px;
     font-weight: 300;
   }
+
   .step4__header {
     font-size: 36px;
     font-weight: 600;
     margin: 2% 0;
   }
+
   .step4__form {
     display: flex;
     margin-top: 7%;
 
-    .step4__form-wrapper{
-      &:nth-of-type(2){
+    .step4__form-wrapper {
+      &:nth-of-type(2) {
         margin-left: 2%;
       }
-      .step4__box__header{
+
+      .step4__box__header {
         font-size: 24px;
         color: black;
         font-weight: 600;
       }
+
       .step4__form-box {
         display: flex;
         justify-content: space-between;
@@ -41,13 +45,15 @@
           font-size: 24px;
           font-weight: 300;
         }
+
         .step4__form-input {
           background: transparent;
           border: 0.75px solid $color-darkgrey;
           height: 30px;
           width: 200px;
         }
-        .step4__form-area{
+
+        .step4__form-area {
           resize: none;
           background: transparent;
           border: 0.75px solid $color-darkgrey;
@@ -58,46 +64,50 @@
     }
   }
 }
-.form__error-li{
+
+.form__error-li {
   color: red;
   font-size: 12px;
   font-weight: bold;
 }
-@media(max-width: 1100px){
-  .step4__container{
-    .step4__header{
+
+@media(max-width: 1100px) {
+  .step4__container {
+    .step4__header {
       font-size: 28px;
     }
   }
 }
 
 @media (max-width: 850px) {
-  #step4{
+  #step4 {
     height: 1400px;
   }
-  .step4__container{
-    .step4__form{
+  .step4__container {
+    .step4__form {
       flex-direction: column;
       margin-bottom: 100px;
-      .step4__form-wrapper{
-        &:nth-of-type(2){
+
+      .step4__form-wrapper {
+        &:nth-of-type(2) {
           margin: 0 0 30px;
         }
       }
     }
   }
-  .form__error-ul{
+  .form__error-ul {
     margin: 30px 0;
   }
 }
-@media (max-width: 500px){
-  #step4{
+
+@media (max-width: 500px) {
+  #step4 {
     height: 1350px;
   }
-  .step4__container{
-    .step4__form{
-      .step4__form-wrapper{
-        .step4__form-box{
+  .step4__container {
+    .step4__form {
+      .step4__form-wrapper {
+        .step4__form-box {
           flex-direction: column;
           align-items: flex-start;
         }

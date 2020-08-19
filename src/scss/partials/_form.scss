@@ -1,12 +1,14 @@
 .collect {
   height: 90vh;
+
   .sweat__img {
     background-image: url("./../../assets/sweater.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 }
-.user__name{
+
+.user__name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,9 +16,10 @@
   text-decoration: none;
   color: $color-grey;
   padding: 4px 7px;
-  border:0.75px solid transparent;
+  border: 0.75px solid transparent;
 }
-.collect__step-box{
+
+.collect__step-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,28 +27,30 @@
   margin-top: 13%;
   margin-right: 30%;
 
-  .step__box-header{
+  .step__box-header {
     font-size: 38px;
     text-align: center;
     line-height: 1.3;
     margin-bottom: 2%;
   }
-  .step__box-text{
+
+  .step__box-text {
     margin: 5% 0 8%;
     font-size: 40px;
     font-weight: 300;
   }
-  .steps__container{
+
+  .steps__container {
     display: flex;
     margin-top: 2%;
 
-    .steps__container-box{
+    .steps__container-box {
       border: 0.75px solid $color-darkgrey;
       transform: rotate(45deg);
       height: 190px;
       width: 190px;
 
-      .steps__container-wrapper{
+      .steps__container-wrapper {
         transform: rotate(-45deg);
         display: flex;
         justify-content: center;
@@ -54,11 +59,12 @@
         width: 150px;
         flex-direction: column;
 
-        .steps__container-header{
+        .steps__container-header {
           font-size: 32px;
           font-weight: 300;
         }
-        .steps__container-text{
+
+        .steps__container-text {
           margin: 15%;
           font-size: 22px;
           font-weight: 300;
@@ -68,23 +74,25 @@
     }
   }
 }
-.yellow__box{
+
+.yellow__box {
   background: $color-yellow;
   height: 180px;
 
-  .yellow__box-wrapper{
+  .yellow__box-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-left: 8%;
     align-items: flex-start;
 
-    .yellow__box-header{
+    .yellow__box-header {
       font-weight: 600;
       font-size: 36px;
       color: black;
     }
-    .yellow__box-text{
+
+    .yellow__box-text {
       font-size: 22px;
       font-weight: 400;
       color: $color-darkgrey;
@@ -93,67 +101,81 @@
 }
 
 @media (max-width: 1450px) {
-  #form__container{
+  #form__container {
     width: 90%;
   }
-  .sweat__img{
+  .sweat__img {
     display: none;
   }
-  .collect__step-box{
+  .collect__step-box {
     margin: 0;
   }
 }
-@media (max-width: 1001px) {
-  .collect__step-box{
+
+@media (max-width: 1000px) {
+  #form__container{
+    margin-top: 150px;
+  }
+  .collect__step-box {
     margin-bottom: 300px;
-    .step__box-header{
+
+    .step__box-header {
       margin-top: 10px;
       font-size: 28px;
     }
-    .step__box-text{
+
+    .step__box-text {
       font-size: 30px;
     }
-    .steps__container{
-      .steps__container-box{
+
+    .steps__container {
+      .steps__container-box {
         height: 130px;
         width: 130px;
       }
     }
   }
-  .collect{
+  .collect {
     height: 70vh;
   }
-  .yellow__box{
+  .yellow__box {
     justify-content: center;
     height: 100%;
-    .yellow__box-wrapper{
+
+    .yellow__box-wrapper {
       margin: 20px 0;
       align-items: center;
-      .yellow__box-header{
+
+      .yellow__box-header {
         font-size: 28px;
       }
-      .yellow__box-text{
+
+      .yellow__box-text {
         font-size: 16px;
       }
     }
   }
 }
-@media(max-width: 700px)  {
-  .collect__step-box{
-    .step__box-text{
+
+@media(max-width: 700px) {
+  .collect__step-box {
+    .step__box-text {
       font-size: 20px;
     }
-    .steps__container{
+
+    .steps__container {
       flex-direction: column;
-      .steps__container-box{
+
+      .steps__container-box {
         margin: 10px 0;
-        &:nth-of-type(4){
+
+        &:nth-of-type(4) {
           margin-bottom: 300px;
         }
       }
     }
   }
-  .collect{
+  .collect {
     height: 1100px;
   }
 }

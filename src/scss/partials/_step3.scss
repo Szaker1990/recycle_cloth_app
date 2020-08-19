@@ -1,4 +1,4 @@
-.step3__container{
+.step3__container {
   font-family: $font-base;
   margin-top: 3%;
   display: flex;
@@ -7,36 +7,39 @@
   margin-left: 8%;
   position: relative;
 
-  .step3__container-counter{
+  .step3__container-counter {
     color: $color-darkgrey;
     font-size: 24px;
     font-weight: 300;
   }
-  .step3__form{
 
-    .step3__select-container{
+  .step3__form {
+
+    .step3__select-container {
       margin-top: 4%;
 
-      .step3__select-header{
+      .step3__select-header {
         font-size: 36px;
         font-weight: 600;
         margin-bottom: 3%;
       }
     }
-    .step3__recipient{
+
+    .step3__recipient {
       margin: 8% 0;
 
-      .step3__recipient-header{
+      .step3__recipient-header {
         font-size: 24px;
         color: black;
         font-weight: 600;
       }
-      .step3__recipient-list{
+
+      .step3__recipient-list {
         display: flex;
         flex-wrap: wrap;
         width: 600px;
 
-        .step3__recipient-item{
+        .step3__recipient-item {
           border: 0.75px solid $color-darkgrey;
           padding: 8px 15px;
           display: flex;
@@ -46,7 +49,8 @@
           cursor: pointer;
           user-select: none;
         }
-        .step3__recipient-itemYellow{
+
+        .step3__recipient-itemYellow {
           border: 0.75px solid $color-darkgrey;
           padding: 8px 15px;
           display: flex;
@@ -59,17 +63,19 @@
         }
       }
     }
-    .step3__input-container{
+
+    .step3__input-container {
       display: flex;
       flex-direction: column;
       margin: 7% 0;
 
-      .step3__input-label{
+      .step3__input-label {
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 3%;
       }
-      .step3__input-area{
+
+      .step3__input-area {
         width: 500px;
         border: 0.75px solid $color-darkgrey;
         font-size: 24px;
@@ -80,30 +86,34 @@
     }
   }
 }
+
 @media (max-width: 700px) {
-  .step3__container{
-    .step3__form{
-      .step3__input-container{
-        .step3__input-area{
+  .step3__container {
+    .step3__form {
+      .step3__input-container {
+        .step3__input-area {
           width: 300px;
         }
       }
-      .step3__recipient{
-        .step3__recipient-list{
+
+      .step3__recipient {
+        .step3__recipient-list {
           width: 100%;
         }
       }
     }
   }
 }
-@media (max-width: 400px ) {
-  .step3__container{
-    .step3__form{
-      .step3__recipient{
-        .step3__recipient-list{
+
+@media (max-width: 400px) {
+  .step3__container {
+    .step3__form {
+      .step3__recipient {
+        .step3__recipient-list {
           display: flex;
           flex-direction: column;
-          .step3__recipient-item{
+
+          .step3__recipient-item {
             width: 80%;
           }
         }

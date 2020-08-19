@@ -1,12 +1,12 @@
-.pagination__wrapper{
+.pagination__wrapper {
   display: flex;
   margin: 5%;
   height: 50px;
 
-  .pagination__item{
+  .pagination__item {
     margin: 0 10%;
 
-    .pagination__link{
+    .pagination__link {
       font-size: 18px;
       color: $font-base;
       background: white;
@@ -15,8 +15,9 @@
       width: 40px;
       height: 50px;
     }
-    .active{
-      border:0.75px solid $color-darkgrey;
+
+    .active {
+      border: 0.75px solid $color-darkgrey;
       background: white;
       cursor: pointer;
       font-size: 18px;
@@ -26,11 +27,13 @@
     }
   }
 }
-@media (max-width:800px ) {
-  .pagination__wrapper{
+
+@media (max-width: 800px) {
+  .pagination__wrapper {
     flex-direction: column;
     height: 200px;
-    .pagination__item{
+
+    .pagination__item {
       margin: 0;
     }
   }

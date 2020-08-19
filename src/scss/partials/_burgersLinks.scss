@@ -1,0 +1,29 @@
+.burger__wrapper {
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+
+.burger__list {
+  display: flex;
+  flex-flow: column wrap;
+  background: $color-white;
+  width: 100%;
+
+}
+
+.burger__item {
+  text-decoration: none;
+  color: $color-grey;
+  font-size: 23px;
+  margin: 10px 5px;
+  padding: 0 5px;
+
+  &:hover {
+    background-color: white;
+  }
+
+}
