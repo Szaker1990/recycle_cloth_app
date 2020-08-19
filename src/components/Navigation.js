@@ -8,7 +8,7 @@ export const Navigation = () =>{
     const[user] = useState(auth.currentUser);
     return(
     <div className="row">
-        <div className={"burger__test"}>
+        <div className={"burger__container"}>
             <Burger/>
         </div>
         <div className="col-6"></div>

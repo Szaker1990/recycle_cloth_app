@@ -13,7 +13,7 @@ export const Header = () => {
             <div id="header" className={"nav__section row"}>
                 <div className={"col-6 login__image"}></div>
                 <div id={"body__container"} className={"col-6"}>
-                    <div className={"burger__test"}>
+                    <div className={"burger__container"}>
                         <Burger/>
                     </div>
                     <div className={"login__container "}>

@@ -64,7 +64,7 @@ export const Form = () => {
     return (
         <>
             <div className="row collect">
-                <div className={"burger__test"}>
+                <div className={"burger__container"}>
                     <Burger/>
                 </div>
                 <div className="col-6 sweat__img"></div>

@@ -111,7 +111,7 @@ body {
     }
   }
 }
-.burger__test{
+.burger__container{
   position: fixed;
   top: 0;
   background: #F0F1F1;
@@ -155,15 +155,7 @@ body {
   .main__nav{
     display: none;
   }
-  .burger__test{
+  .burger__container{
     display: block;
   }
-  //.main__nav-list{
-  //  flex-flow: column wrap;
-  //  position: fixed;
-  //  top: 3%;
-  //  left: 0;
-  //  width: 300px;
-  //  background-color: $color-white;
-  //}
 }
