@@ -1,4 +1,4 @@
-###Recycle Cloth App
+##Recycle Cloth App
 Live Demo   [Click Here](https://szaker1990.github.io/recycle_cloth_app/#/).
 
 ## Technologies
@@ -11,7 +11,7 @@ Live Demo   [Click Here](https://szaker1990.github.io/recycle_cloth_app/#/).
 - Styled Components
 - NPM
 
-###How to run? 
+##How to run? 
 ### `git clone https://github.com/Szaker1990/recycle_cloth_app.git`
 ### `npm install`
 ### `npm start`
