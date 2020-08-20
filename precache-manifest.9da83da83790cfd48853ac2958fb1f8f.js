@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "89c5f2a872c6220c020e8d89500769a6",
+    "revision": "b1064d012bacb8c0035a6f855c7eb1e5",
     "url": "/recycle_cloth_app/index.html"
   },
   {
-    "revision": "fc20426f473ee851a8c8",
-    "url": "/recycle_cloth_app/static/css/main.750b5523.chunk.css"
+    "revision": "c1e92d2265995159e9ba",
+    "url": "/recycle_cloth_app/static/css/main.883a4dc9.chunk.css"
   },
   {
     "revision": "1ef6d8c9b0143160ae99",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/recycle_cloth_app/static/js/2.74fa6568.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fc20426f473ee851a8c8",
+    "revision": "c1e92d2265995159e9ba",
     "url": "/recycle_cloth_app/static/js/main.44073a1e.chunk.js"
   },
   {

@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/recycle_cloth_app/static/css/main.750b5523.chunk.css",
+    "main.css": "/recycle_cloth_app/static/css/main.883a4dc9.chunk.css",
     "main.js": "/recycle_cloth_app/static/js/main.44073a1e.chunk.js",
     "main.js.map": "/recycle_cloth_app/static/js/main.44073a1e.chunk.js.map",
     "runtime-main.js": "/recycle_cloth_app/static/js/runtime-main.b8a252e4.js",
@@ -8,9 +8,9 @@
     "static/js/2.74fa6568.chunk.js": "/recycle_cloth_app/static/js/2.74fa6568.chunk.js",
     "static/js/2.74fa6568.chunk.js.map": "/recycle_cloth_app/static/js/2.74fa6568.chunk.js.map",
     "index.html": "/recycle_cloth_app/index.html",
-    "precache-manifest.5bcb262bb9f3663cb4a210fcf3d091a1.js": "/recycle_cloth_app/precache-manifest.5bcb262bb9f3663cb4a210fcf3d091a1.js",
+    "precache-manifest.9da83da83790cfd48853ac2958fb1f8f.js": "/recycle_cloth_app/precache-manifest.9da83da83790cfd48853ac2958fb1f8f.js",
     "service-worker.js": "/recycle_cloth_app/service-worker.js",
-    "static/css/main.750b5523.chunk.css.map": "/recycle_cloth_app/static/css/main.750b5523.chunk.css.map",
+    "static/css/main.883a4dc9.chunk.css.map": "/recycle_cloth_app/static/css/main.883a4dc9.chunk.css.map",
     "static/js/2.74fa6568.chunk.js.LICENSE.txt": "/recycle_cloth_app/static/js/2.74fa6568.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/recycle_cloth_app/static/media/sweater.87008d4c.png",
     "static/media/Signature.svg": "/recycle_cloth_app/static/media/Signature.d87cadf2.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.b8a252e4.js",
     "static/js/2.74fa6568.chunk.js",
-    "static/css/main.750b5523.chunk.css",
+    "static/css/main.883a4dc9.chunk.css",
     "static/js/main.44073a1e.chunk.js"
   ]
 }
