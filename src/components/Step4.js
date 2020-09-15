@@ -3,7 +3,8 @@ import {YellowLabel} from "./YellowLabel";
 import {Contact} from "./Contact";
 import {Buttons} from "./Buttons";
 
-export const Step4 = ({currentStep, nextStep, prevStep,dataChange,street,city,phone,postCode,date,time,notice}) => {
+export const Step4 = ( props ) => {
+    const{currentStep, nextStep, prevStep,dataChange,street,city,phone,postCode,date,time,notice} = props
     const[listOfErrors,setListOfErrors] = useState([]);
     useEffect(() =>{
         // handleErrors()

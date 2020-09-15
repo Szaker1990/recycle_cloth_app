@@ -5,7 +5,8 @@ import refresh from "../assets/refresh.png";
 import {YellowLabel} from "./YellowLabel";
 import {Buttons} from "./Buttons";
 
-export const Summary = ({currentStep,nextStep,prevStep,items,who,street,city,date,time,notice ,postCode,phone,from,howMuch}) => {
+export const Summary = (props) => {
+    const{ currentStep, nextStep, prevStep, items, who, street, city, date,time, notice,postCode, phone, from, howMuch } = props
     if (currentStep !== 5) {
         return null
     }

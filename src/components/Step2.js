@@ -4,7 +4,8 @@ import {Contact} from "./Contact";
 import {Select} from "./Select";
 import {Buttons} from "./Buttons";
 
-export const Step2 = ({currentStep, nextStep, prevStep,dataChange,head}) => {
+export const Step2 = ( props ) => {
+    const{ currentStep, nextStep, prevStep, dataChange, head} = props
     const[disabled,setDisabled] = useState(true);
     const enableButton = () => {
         head > 0 ? setDisabled(false) : setDisabled(true)

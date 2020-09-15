@@ -19,9 +19,7 @@ function App() {
               <Route path='/wylogowanie' component={Logout} />
               <Route path='/formularz' component={Form} />
           </>
-
       </HashRouter>
   );
 }
-
 export default App;

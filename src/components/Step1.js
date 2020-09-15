@@ -2,7 +2,8 @@ import React, {useEffect, useState} from "react"
 import {Contact} from "./Contact";
 import {YellowLabel} from "./YellowLabel";
 
-export const Step1 = ({currentStep,nextStep,dataChange,data}) => {
+export const Step1 = ( props ) => {
+    const{currentStep, nextStep, dataChange, data } = props
     const[disabled,setDisabled] = useState(true)
     const enableButton = () => {
         data.length >0 ? setDisabled(false) : setDisabled(true)
