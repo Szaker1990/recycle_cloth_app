@@ -1,6 +1,6 @@
 ## Recycle Cloth App
 
-Live Demo   [Click Here](https://szaker1990.github.io/recycle_cloth_app/#/).
+Live Demo   [Click Here](https://szakeroo.github.io/recycle_cloth_app/).
 
 ## Technologies
 
