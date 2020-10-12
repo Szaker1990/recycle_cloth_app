@@ -23,13 +23,11 @@ export const Login = () => {
     async function handleLogin (e){
         e.preventDefault()
         if (user.email.length < 5 || !user.email.includes("@") || !user.email.includes(".")) {
-            setEmailError("Podany email jest nieprawidłowy!");
         }
         else {
             setEmailError("");
         }
         if (user.password.length < 6) {
-            setPasswordError("Podane hasło jest za krótkie!");
         }
         else {
             setPasswordError("");
@@ -38,7 +36,7 @@ export const Login = () => {
             await loginFire(user.email, user.password)
             history.push("/");
         } catch (err) {
-            setEmailError(err.message);
+            setPasswordError("Nieprawidłowe dane");
         }
     }
     return (
